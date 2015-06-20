@@ -1,0 +1,4 @@
+"Gin & Tonic"
+"A gin and tonic is a highball cocktail made with gin and tonic water, The cocktail was introduced by the army of the British East India Company in India due to Tonic's ability to prevent and treat Malaria"
+"ginAndTonic.jpg"
+
