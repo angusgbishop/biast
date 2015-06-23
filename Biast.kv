@@ -1,0 +1,83 @@
+<DrinkCard@BoxLayout>:
+    orientation:'vertical'
+    size_hint: (0.8,1)
+    pos_hint: {'right':0.9}
+    Button:
+        text: 'Placeholder for a drink'
+        on_press: app.root.enterDrink()
+    Label:
+        id:DrinkNameCard
+        size_hint:(1, 0.1)
+        text: 'Placeholder'
+    Label:
+        id:DrinkDescriptionCard
+        size_hint:(1, 0.1)
+        text: 'Placeholder Description'
+
+<TitleBar@BoxLayout>
+    id: title_bar
+    size_hint: (1,0.1)
+    spacing: 10
+    Button:
+        width: 30
+        text: 'Search button'
+        on_release: app.root.current = 'search_screen'
+    Button:
+        width: 30
+        text: 'Back Button'
+        on_release: app.root.backScreen()
+    Label:
+        id: title_bar_text
+        size_hint: (1,1)
+        text: 'Placeholder Title'
+    Button:
+        width: 30
+        text: 'settings button'
+        on_release: app.root.current = 'settings_screen'
+
+
+<FavouritesCarousel@Carousel>:
+    direction: 'right'
+    id: favs_carousel
+    size_hint: (1, 0.6)
+    pos_hint: {'y': 0.2}
+    loop: 'True'
+
+    DrinkCard:
+        text: 'Favourite No.1'
+
+    DrinkCard:
+        text: 'Favourite No 2'
+
+
+<MainSheet@BoxLayout>:
+    orientation: 'vertical'
+    TitleBar:
+    BoxLayout:
+        id:mainArea
+    Label:
+        id:DrinkNameCard
+        size_hint:(1, 0.1)
+        text: 'Placeholder'
+
+
+
+<EmptyScreen>:
+    MainSheet:
+
+<FavouritesScreen>:
+    EmptyScreen:
+        self.title_bar.title_bar_text.text: 'Favourites'
+    name: 'Favourites_screen'
+
+
+<SearchScreen>:
+    name: 'search_screen'
+
+<SettingsScreen>:
+    name: 'settings_screen'
+
+<Screens>
+    SearchScreen:
+    SettingsScreen:
+    FavouritesScreen:

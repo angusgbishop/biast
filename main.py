@@ -26,14 +26,17 @@ class Screens(ScreenManager):
             previousScreen = self.current
             self.current = self.previous()
             self.remove_screen(previousScreen)
+        elif self.current == 'Favourites_screen':
+            pass
         else:
             self.current = self.previous()
+            print self.current
 
 
 class EmptyScreen(Screen):
     pass
 
-class FavouritesScreen(EmptyScreen):
+class FavouritesScreen(Screen):
     pass
 
 class DrinkScreen(EmptyScreen):
@@ -58,7 +61,7 @@ class DrinkCard(BoxLayout):
 
 class BiastApp(App):
     def statistics():
-            pass
+        pass
 
     def build(self):
 
