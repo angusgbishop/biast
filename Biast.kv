@@ -16,14 +16,17 @@
 
 <TitleBar@BoxLayout>
     id: title_bar
-    size_hint: (1,0.1)
+    size_hint: (1,None)
+    size: (1,50)
     spacing: 10
     Button:
-        width: 30
+        size_hint:(None,None)
+        width: 50
         text: 'Search button'
         on_release: app.root.current = 'search_screen'
     Button:
-        width: 30
+        size_hint:(None,None)
+        width: 50
         text: 'Back Button'
         on_release: app.root.backScreen()
     Label:
@@ -31,7 +34,8 @@
         size_hint: (1,1)
         text: 'Placeholder Title'
     Button:
-        width: 30
+        size_hint:(None,None)
+        width: 50
         text: 'settings button'
         on_release: app.root.current = 'settings_screen'
 
@@ -60,16 +64,11 @@
         size_hint:(1, 0.1)
         text: 'Placeholder'
 
-
-
 <EmptyScreen>:
     MainSheet:
 
 <FavouritesScreen>:
-    EmptyScreen:
-        self.title_bar.title_bar_text.text: 'Favourites'
     name: 'Favourites_screen'
-
 
 <SearchScreen>:
     name: 'search_screen'

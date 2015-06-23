@@ -1,13 +1,14 @@
 from kivy.app import App
 
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.uix.screenmanager import ScreenManager, Screen, RiseInTransition
 
 import statistics
 import data.drinks
 
 
 class Screens(ScreenManager):
+    transition = RiseInTransition()
     def enterDrink(self):
         print 'button pressed'
         name = '1'
@@ -36,7 +37,7 @@ class Screens(ScreenManager):
 class EmptyScreen(Screen):
     pass
 
-class FavouritesScreen(Screen):
+class FavouritesScreen(EmptyScreen):
     pass
 
 class DrinkScreen(EmptyScreen):
