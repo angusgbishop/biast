@@ -1,26 +1,68 @@
 from kivy.app import App
 
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.button import Button
-from kivy.uix.carousel import Carousel
+from kivy.uix.screenmanager import ScreenManager, Screen
 
-class DrinkCard(Button):
+import statistics
+import data.drinks
 
+
+class Screens(ScreenManager):
     def enterDrink(self):
         print 'button pressed'
+        name = '1'
+        newDrink = DrinkScreen(name=name)
+        self.add_widget(newDrink)
+        self.current = name
+
+    def makeDrink(self,drink_to_make):
+
+        drinks.makeDrink(drink_to_make)
+        statistics.drink_to_make.times_made += 1
+
+
+    def backScreen(self):
+        if self.current == "DrinkScreen":
+            previousScreen = self.current
+            self.current = self.previous()
+            self.remove_screen(previousScreen)
+        else:
+            self.current = self.previous()
+
+
+class EmptyScreen(Screen):
+    pass
+
+class FavouritesScreen(EmptyScreen):
+    pass
+
+class DrinkScreen(EmptyScreen):
+    pass
+
+
+class SettingsScreen(EmptyScreen):
+    pass
+
+
+class SearchScreen(EmptyScreen):
+    pass
+
+
+class SelectionScreen(EmptyScreen):
+    pass
+
+
+class DrinkCard(BoxLayout):
+    pass
+
 
 class BiastApp(App):
+    def statistics():
+            pass
+
     def build(self):
-        mainsheet = BoxLayout(orientation='horizontal')
 
-        mainslide = Carousel(direction='right', loop='True', size_hint=(0.8, 0.6), pos_hint_centre=(0.5, 0.5))
-
-        mainslide.add_widget(DrinkCard())
-        mainslide.add_widget(DrinkCard())
-
-        mainsheet.add_widget(mainslide)
-
-        return mainsheet
+        return Screens()
 
 
 if __name__ == "__main__":
