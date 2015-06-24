@@ -1,23 +1,29 @@
 <DrinkCard@BoxLayout>:
+    drink_name: ''
+    drink_description:''
+    drink_id:''
     orientation:'vertical'
     size_hint: (0.8,1)
     pos_hint: {'right':0.9}
     Button:
-        text: 'Placeholder for a drink'
-        on_press: app.root.enterDrink()
+        on_press: app.root.enterDrink(root.drink_id)
         font_name: 'data/Roboto-Regular.ttf'
+        background_normal: 'data/Drinks/' + root.drink_id + '.png'
     Label:
         id:'DrinkNameCard'
+        color: (0,0,0,1)
         size_hint:(1, 0.1)
-        text: 'Placeholder'
-        font_name: 'data/Roboto-Regular.ttf'
+        text: root.drink_name
+        font_name: 'data/Roboto-Medium.ttf'
     Label:
         id:'DrinkDescriptionCard'
+        color: (0,0,0,1)
         size_hint:(1, 0.1)
-        text: 'Placeholder Description'
+        text: root.drink_description
         font_name: 'data/Roboto-Regular.ttf'
 
 <TitleBar@BoxLayout>
+    text: ''
     canvas.before:
         Color:
             rgba: 1, 0.76, 0.02, 1
@@ -31,42 +37,45 @@
     spacing: 10
     padding: 5
     Button:
-        size_hint:(None,None)
+        size_hint:(None,1)
         width: 50
-        text: 'Search button'
         on_release: app.root.current = 'Search_screen'
+        background_normal: 'data/UI/search.png'
     Button:
-        size_hint:(None,None)
+        size_hint:(None,1)
         width: 50
-        text: 'Back Button'
         background_normal: 'data/UI/arrow_back.png'
         on_release: app.root.backScreen()
     Label:
         id: 'title_bar_text'
         font_name: 'data/Roboto-Medium.ttf'
         font_size: 25
-        text: 'Placeholder Title'
+        text: root.text
     Button:
-        size_hint:(None,None)
+        size_hint:(None,1)
         width: 50
-        text: 'settings button'
         on_release: app.root.current = 'Settings_screen'
+        background_normal: 'data/UI/settings.png'
 
 
 <FavouritesCarousel@Carousel>:
     direction: 'right'
     id: 'favs_carousel'
-    size_hint: (1, 0.6)
-    pos_hint: {'y': 0.2}
+    size_hint: (1,0.9)
     loop: 'True'
 
     DrinkCard:
-        text: 'Favourite No.1'
+        drink_name: 'Favourite No.1'
+        drink_description: 'The first Favourite'
+        drink_id: 'ginAndTonic'
 
     DrinkCard:
-        text: 'Favourite No 2'
+        drink_name: 'Favourite No 2'
+        drink_description: 'The second favourite'
+        drink_id: 'rumAndCoke'
 
 <EmptyScreen>:
+    text: self.title_text
     BoxLayout:
         canvas.before:
             Color:
@@ -78,21 +87,24 @@
         id:'total_box'
         orientation: 'vertical'
         TitleBar:
+            text: root.text
         BoxLayout:
             id:'mainArea'
 
 <FavouritesScreen>:
     name: 'Favourites_screen'
+    title_text: 'Favourites'
     FavouritesCarousel:
 
 <SearchScreen>:
     name: 'Search_screen'
+    title_text: 'Search'
 
 <SettingsScreen>:
     name: 'Settings_screen'
+    title_text: 'Settings'
 
 <Screens>
-
     FavouritesScreen:
     SearchScreen:
     SettingsScreen:

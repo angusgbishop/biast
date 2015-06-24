@@ -1,5 +1,6 @@
 from kivy.app import App
 
+from kivy.properties import StringProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import ScreenManager, Screen, RiseInTransition
 
@@ -9,9 +10,11 @@ import data.drinks
 
 class Screens(ScreenManager):
     transition = RiseInTransition()
-    def enterDrink(self):
+
+    def enterDrink(self, drink_id):
         print 'button pressed'
         name = '1'
+        self.title_text = str(drink_id)
         newDrink = DrinkScreen(name=name)
         self.add_widget(newDrink)
         self.current = name
@@ -30,12 +33,11 @@ class Screens(ScreenManager):
         elif self.current == 'Favourites_screen':
             pass
         else:
-            self.current = self.previous()
-            print self.current
+            self.current = 'Favourites_screen'
 
 
 class EmptyScreen(Screen):
-    pass
+    title_text = StringProperty('')
 
 class FavouritesScreen(EmptyScreen):
     pass
@@ -45,7 +47,6 @@ class DrinkScreen(EmptyScreen):
 
 class SettingsScreen(EmptyScreen):
     pass
-
 
 class SearchScreen(EmptyScreen):
     pass
