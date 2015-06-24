@@ -43,7 +43,6 @@ class FavouritesScreen(EmptyScreen):
 class DrinkScreen(EmptyScreen):
     pass
 
-
 class SettingsScreen(EmptyScreen):
     pass
 
