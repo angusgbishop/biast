@@ -5,44 +5,57 @@
     Button:
         text: 'Placeholder for a drink'
         on_press: app.root.enterDrink()
+        font_name: 'data/Roboto-Regular.ttf'
     Label:
-        id:DrinkNameCard
+        id:'DrinkNameCard'
         size_hint:(1, 0.1)
         text: 'Placeholder'
+        font_name: 'data/Roboto-Regular.ttf'
     Label:
-        id:DrinkDescriptionCard
+        id:'DrinkDescriptionCard'
         size_hint:(1, 0.1)
         text: 'Placeholder Description'
+        font_name: 'data/Roboto-Regular.ttf'
 
 <TitleBar@BoxLayout>
-    id: title_bar
+    canvas.before:
+        Color:
+            rgba: 1, 0.76, 0.02, 1
+        Rectangle:
+            # self here refers to the widget i.e BoxLayout
+            pos: self.pos
+            size: self.size
+    id: 'title_bar'
     size_hint: (1,None)
-    size: (1,50)
+    size: (1,60)
     spacing: 10
+    padding: 5
     Button:
         size_hint:(None,None)
         width: 50
         text: 'Search button'
-        on_release: app.root.current = 'search_screen'
+        on_release: app.root.current = 'Search_screen'
     Button:
         size_hint:(None,None)
         width: 50
         text: 'Back Button'
+        background_normal: 'data/UI/arrow_back.png'
         on_release: app.root.backScreen()
     Label:
-        id: title_bar_text
-        size_hint: (1,1)
+        id: 'title_bar_text'
+        font_name: 'data/Roboto-Medium.ttf'
+        font_size: 25
         text: 'Placeholder Title'
     Button:
         size_hint:(None,None)
         width: 50
         text: 'settings button'
-        on_release: app.root.current = 'settings_screen'
+        on_release: app.root.current = 'Settings_screen'
 
 
 <FavouritesCarousel@Carousel>:
     direction: 'right'
-    id: favs_carousel
+    id: 'favs_carousel'
     size_hint: (1, 0.6)
     pos_hint: {'y': 0.2}
     loop: 'True'
@@ -53,30 +66,33 @@
     DrinkCard:
         text: 'Favourite No 2'
 
-
-<MainSheet@BoxLayout>:
-    orientation: 'vertical'
-    TitleBar:
-    BoxLayout:
-        id:mainArea
-    Label:
-        id:DrinkNameCard
-        size_hint:(1, 0.1)
-        text: 'Placeholder'
-
 <EmptyScreen>:
-    MainSheet:
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                # self here refers to the widget i.e BoxLayout
+                pos: self.pos
+                size: self.size
+        id:'total_box'
+        orientation: 'vertical'
+        TitleBar:
+        BoxLayout:
+            id:'mainArea'
 
 <FavouritesScreen>:
     name: 'Favourites_screen'
+    FavouritesCarousel:
 
 <SearchScreen>:
-    name: 'search_screen'
+    name: 'Search_screen'
 
 <SettingsScreen>:
-    name: 'settings_screen'
+    name: 'Settings_screen'
 
 <Screens>
+
+    FavouritesScreen:
     SearchScreen:
     SettingsScreen:
-    FavouritesScreen:
