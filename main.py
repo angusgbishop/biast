@@ -12,8 +12,8 @@ class Screens(ScreenManager):
     transition = RiseInTransition()
 
     def enterDrink(self, drink_id):
-        print 'button pressed'
-        name = '1'
+        print drink_id
+        name = drink_id
         self.title_text = str(drink_id)
         newDrink = DrinkScreen(name=name)
         self.add_widget(newDrink)
@@ -44,6 +44,7 @@ class FavouritesScreen(EmptyScreen):
 
 class DrinkScreen(EmptyScreen):
     pass
+
 
 class SettingsScreen(EmptyScreen):
     pass

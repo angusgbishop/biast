@@ -22,6 +22,20 @@
         text: root.drink_description
         font_name: 'data/Roboto-Regular.ttf'
 
+<Separator@Widget>:
+    size_hint_y: None
+    height: dp(1)
+    color: 0, 0, 0, 1
+    background_image: ''
+
+    canvas:
+        Color:
+            rgba: root.color
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: root.background_image
+
 <TitleBar@BoxLayout>
     text: ''
     canvas.before:
@@ -34,26 +48,26 @@
     id: 'title_bar'
     size_hint: (1,None)
     size: (1,60)
-    spacing: 10
-    padding: 5
+    spacing: dp(10)
+    padding: dp(5)
     Button:
         size_hint:(None,1)
-        width: 50
+        width: dp(50)
         on_release: app.root.current = 'Search_screen'
         background_normal: 'data/UI/search.png'
     Button:
         size_hint:(None,1)
-        width: 50
+        width: dp(50)
         background_normal: 'data/UI/arrow_back.png'
         on_release: app.root.backScreen()
     Label:
         id: 'title_bar_text'
         font_name: 'data/Roboto-Medium.ttf'
-        font_size: 25
+        font_size: dp(25)
         text: root.text
     Button:
         size_hint:(None,1)
-        width: 50
+        width: dp(50)
         on_release: app.root.current = 'Settings_screen'
         background_normal: 'data/UI/settings.png'
 
@@ -85,6 +99,7 @@
                 pos: self.pos
                 size: self.size
         id:'total_box'
+        container:
         orientation: 'vertical'
         TitleBar:
             text: root.text
@@ -103,6 +118,64 @@
 <SettingsScreen>:
     name: 'Settings_screen'
     title_text: 'Settings'
+
+<DrinkScreen>
+    title_text: 'Drink Name'
+    BoxLayout:
+        orientation: 'horizontal'
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: 0.9
+            padding: dp(20)
+            spacing: dp(30)
+            Image:
+                source: 'data/Drinks/rumAndCoke.png'
+            Button:
+                size_hint: (1,0.2)
+                color: (24.7, 31.8, 71)
+            Label:
+                size_hint: (1,0.08)
+        BoxLayout:
+            orientation: 'vertical'
+            BoxLayout:
+                size_hint_y: 0.9
+                pos_hint: {'y':1}
+                BoxLayout:
+                    orientation: 'vertical'
+                    Label:
+                        text: 'Spirits'
+                        color: (0,0,0,1)
+                        font_name: 'data/Roboto-Regular.ttf'
+                    Separator:
+                    Label:
+                        text: 'Spirit 1'
+                        color: (0,0,0,1)
+                        font_name: 'data/Roboto-Regular.ttf'
+                    Separator:
+                    Label:
+                        text: 'Spirit 2'
+                        color: (0,0,0,1)
+                        font_name: 'data/Roboto-Regular.ttf'
+                    Separator:
+                    Label:
+                        text: 'Spirit 3'
+                        color: (0,0,0,1)
+                        font_name: 'data/Roboto-Regular.ttf'
+                BoxLayout:
+                    orientation: 'horizontal'
+                    Label:
+                        text: 'Mixers'
+                        color: (0,0,0,1)
+                        font_name: 'data/Roboto-Regular.ttf'
+            Separator:
+                height: dp(2)
+            Label:
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                text_size: self.size
+                color: (0,0,0,1)
+                font_name: 'data/Roboto-Regular.ttf'
+                halign: 'left'
+                valign: 'top'
 
 <Screens>
     FavouritesScreen:
