@@ -3,21 +3,35 @@ from kivy.app import App
 from kivy.properties import StringProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import ScreenManager, Screen, RiseInTransition
+from kivy.factory import Factory
 
 import statistics
-import data.drinks
+import drinks
+import rawLiquids
 
 
 class Screens(ScreenManager):
     transition = RiseInTransition()
 
     def enterDrink(self, drink_id):
-        print drink_id
-        name = drink_id
-        self.title_text = str(drink_id)
-        newDrink = DrinkScreen(name=name)
-        self.add_widget(newDrink)
-        self.current = name
+        self.current = 'drink_screen'
+        print drinks.get_drink_name(drink_id)
+        self.ids.drink_screen_id.title_text = drinks.get_drink_name(drink_id)
+        self.ids.drink_screen_id.ids.drink_description_id.text = drinks.get_drink_description(drink_id)
+        spirits = rawLiquids.ingredientsSplit(drinks.get_drink_recipie(drink_id))[0]
+        mixers = rawLiquids.ingredientsSplit(drinks.get_drink_recipie(drink_id))[1]
+        print spirits
+        # Factory.Label(text = spirit[0] + ' parts ' + spirit[1])    Factory.Separator
+        for spirit in spirits:
+            print (str(spirit[0]) + ' parts ' + str(spirit[1]))
+            self.ids.drink_screen_id.ids.drink_spirit_list.add_widget(Factory.Separator())
+            self.ids.drink_screen_id.ids.drink_spirit_list.add_widget(
+                Factory.Label(text=str(spirit[0]) + ' parts ' + str(spirit[1])))
+        for mixer in mixers:
+            print (str(mixer[0]) + ' parts ' + str(mixer[1]))
+            self.ids.drink_screen_id.ids.drink_mixer_list.add_widget(Factory.Separator())
+            self.ids.drink_screen_id.ids.drink_mixer_list.add_widget(
+                Factory.Label(text=str(mixer[0]) + ' parts ' + str(mixer[1])))
 
     def makeDrink(self,drink_to_make):
 

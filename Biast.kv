@@ -1,3 +1,7 @@
+<Label>:
+    color: (0,0,0,1)
+    font_name: 'data/Roboto-Regular.ttf'
+
 <DrinkCard@BoxLayout>:
     drink_name: ''
     drink_description:''
@@ -11,16 +15,13 @@
         background_normal: 'data/Drinks/' + root.drink_id + '.png'
     Label:
         id:'DrinkNameCard'
-        color: (0,0,0,1)
         size_hint:(1, 0.1)
         text: root.drink_name
         font_name: 'data/Roboto-Medium.ttf'
     Label:
         id:'DrinkDescriptionCard'
-        color: (0,0,0,1)
         size_hint:(1, 0.1)
         text: root.drink_description
-        font_name: 'data/Roboto-Regular.ttf'
 
 <Separator@Widget>:
     size_hint_y: None
@@ -61,10 +62,11 @@
         background_normal: 'data/UI/arrow_back.png'
         on_release: app.root.backScreen()
     Label:
-        id: 'title_bar_text'
+        id: title_bar_text
         font_name: 'data/Roboto-Medium.ttf'
         font_size: dp(25)
         text: root.text
+        color: (1,1,1,1)
     Button:
         size_hint:(None,1)
         width: dp(50)
@@ -81,12 +83,12 @@
     DrinkCard:
         drink_name: 'Favourite No.1'
         drink_description: 'The first Favourite'
-        drink_id: 'ginAndTonic'
+        drink_id: 'ginandtonic'
 
     DrinkCard:
         drink_name: 'Favourite No 2'
         drink_description: 'The second favourite'
-        drink_id: 'rumAndCoke'
+        drink_id: 'rumandcoke'
 
 <EmptyScreen>:
     text: self.title_text
@@ -120,6 +122,7 @@
     title_text: 'Settings'
 
 <DrinkScreen>
+    name: 'drink_screen'
     title_text: 'Drink Name'
     BoxLayout:
         size_hint: (1,0.9)
@@ -142,39 +145,28 @@
                 size_hint_y: 0.9
                 pos_hint: {'y':0.8}
                 BoxLayout:
+                    id: drink_spirit_list
                     orientation: 'vertical'
                     Label:
+                        size_hint_y: None
+                        height: dp(40)
                         text: 'Spirits'
-                        color: (0,0,0,1)
-                        font_name: 'data/Roboto-Regular.ttf'
-                    Separator:
-                    Label:
-                        text: 'Spirit 1'
-                        color: (0,0,0,1)
-                        font_name: 'data/Roboto-Regular.ttf'
-                    Separator:
-                    Label:
-                        text: 'Spirit 2'
-                        color: (0,0,0,1)
-                        font_name: 'data/Roboto-Regular.ttf'
-                    Separator:
-                    Label:
-                        text: 'Spirit 3'
-                        color: (0,0,0,1)
-                        font_name: 'data/Roboto-Regular.ttf'
+                        font_name: 'data/Roboto-Medium.ttf'
+
                 BoxLayout:
-                    orientation: 'horizontal'
+                    orientation: 'vertical'
+                    id: drink_mixer_list
                     Label:
+                        size_hint_y: None
+                        height: dp(40)
                         text: 'Mixers'
-                        color: (0,0,0,1)
-                        font_name: 'data/Roboto-Regular.ttf'
+                        font_name: 'data/Roboto-Medium.ttf'
             Separator:
                 height: dp(2)
             Label:
+                id: drink_description_id
                 text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                 text_size: self.size
-                color: (0,0,0,1)
-                font_name: 'data/Roboto-Regular.ttf'
                 halign: 'left'
                 valign: 'top'
 
@@ -182,3 +174,5 @@
     FavouritesScreen:
     SearchScreen:
     SettingsScreen:
+    DrinkScreen:
+        id: drink_screen_id
