@@ -10,7 +10,7 @@
     size_hint: (0.8,1)
     pos_hint: {'right':0.9}
     Button:
-        on_press: app.root.enterDrink(root.drink_id)
+        on_release: app.root.enterDrink(root.drink_id)
         font_name: 'data/Roboto-Regular.ttf'
         background_normal: 'data/Drinks/' + root.drink_id + '.png'
     Label:
@@ -101,7 +101,6 @@
                 pos: self.pos
                 size: self.size
         id:'total_box'
-        container:
         orientation: 'vertical'
         TitleBar:
             text: root.text
@@ -124,19 +123,23 @@
 <DrinkScreen>
     name: 'drink_screen'
     title_text: 'Drink Name'
+    drink_id: 'Drink_id'
     BoxLayout:
         size_hint: (1,0.9)
         orientation: 'horizontal'
         BoxLayout:
+            size_hint:(0.78,1)
             orientation: 'vertical'
-            size_hint_y: 0.9
             padding: dp(20)
             spacing: dp(30)
             Image:
+                id: drink_image
                 source: 'data/Drinks/rumAndCoke.png'
             Button:
                 size_hint: (1,0.2)
                 color: (24.7, 31.8, 71)
+                text: 'Make this drink'
+                on_release: app.root.make_drink(root.drink_id)
             Label:
                 size_hint: (1,0.08)
         BoxLayout:
@@ -145,22 +148,27 @@
                 size_hint_y: 0.9
                 pos_hint: {'y':0.8}
                 BoxLayout:
-                    id: drink_spirit_list
                     orientation: 'vertical'
                     Label:
                         size_hint_y: None
                         height: dp(40)
                         text: 'Spirits'
                         font_name: 'data/Roboto-Medium.ttf'
+                    BoxLayout:
+                        id: drink_spirit_list
+                        orientation: 'vertical'
 
                 BoxLayout:
                     orientation: 'vertical'
-                    id: drink_mixer_list
                     Label:
                         size_hint_y: None
                         height: dp(40)
                         text: 'Mixers'
                         font_name: 'data/Roboto-Medium.ttf'
+                    BoxLayout:
+                        id: drink_mixer_list
+                        orientation: 'vertical'
+
             Separator:
                 height: dp(2)
             Label:

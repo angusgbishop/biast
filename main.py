@@ -15,29 +15,32 @@ class Screens(ScreenManager):
 
     def enterDrink(self, drink_id):
         self.current = 'drink_screen'
-        print drinks.get_drink_name(drink_id)
-        self.ids.drink_screen_id.title_text = drinks.get_drink_name(drink_id)
-        self.ids.drink_screen_id.ids.drink_description_id.text = drinks.get_drink_description(drink_id)
+        drink_screen = self.ids.drink_screen_id
+
+        drink_screen.drink_id = drink_id
+        drink_screen.title_text = drinks.get_drink_name(drink_id)
+
+        drink_screen.ids.drink_description_id.text = drinks.get_drink_description(drink_id)  # Add drink description
+
+        drink_screen.ids.drink_image.source = drinks.get_drink_img(drink_id)  # Add drink image
+
+        drink_screen.ids.drink_spirit_list.clear_widgets()  # Remove any widgets from previous drinks
+        drink_screen.ids.drink_mixer_list.clear_widgets()  # Remove any widgets from previous drinks
+
         spirits = rawLiquids.ingredientsSplit(drinks.get_drink_recipie(drink_id))[0]
         mixers = rawLiquids.ingredientsSplit(drinks.get_drink_recipie(drink_id))[1]
-        print spirits
-        # Factory.Label(text = spirit[0] + ' parts ' + spirit[1])    Factory.Separator
         for spirit in spirits:
-            print (str(spirit[0]) + ' parts ' + str(spirit[1]))
-            self.ids.drink_screen_id.ids.drink_spirit_list.add_widget(Factory.Separator())
-            self.ids.drink_screen_id.ids.drink_spirit_list.add_widget(
+            drink_screen.ids.drink_spirit_list.add_widget(Factory.Separator())
+            drink_screen.ids.drink_spirit_list.add_widget(
                 Factory.Label(text=str(spirit[0]) + ' parts ' + str(spirit[1])))
         for mixer in mixers:
-            print (str(mixer[0]) + ' parts ' + str(mixer[1]))
-            self.ids.drink_screen_id.ids.drink_mixer_list.add_widget(Factory.Separator())
-            self.ids.drink_screen_id.ids.drink_mixer_list.add_widget(
-                Factory.Label(text=str(mixer[0]) + ' parts ' + str(mixer[1])))
+            drink_screen.ids.drink_mixer_list.add_widget(Factory.Separator())
+            drink_screen.ids.drink_mixer_list.add_widget(Factory.Label(text=str(mixer[0]) + ' parts ' + str(mixer[1])))
 
-    def makeDrink(self,drink_to_make):
+    def make_drink(self, drink_id):
 
-        drinks.makeDrink(drink_to_make)
-        statistics.drink_to_make.times_made += 1
-
+        drinks.make_drink(drink_id)
+        statistics.times_made[drink_id] += 1
 
     def backScreen(self):
         if self.current == "DrinkScreen":
@@ -53,8 +56,10 @@ class Screens(ScreenManager):
 class EmptyScreen(Screen):
     title_text = StringProperty('')
 
+
 class FavouritesScreen(EmptyScreen):
     pass
+
 
 class DrinkScreen(EmptyScreen):
     pass
@@ -62,6 +67,7 @@ class DrinkScreen(EmptyScreen):
 
 class SettingsScreen(EmptyScreen):
     pass
+
 
 class SearchScreen(EmptyScreen):
     pass
@@ -80,7 +86,6 @@ class BiastApp(App):
         pass
 
     def build(self):
-
         return Screens()
 
 

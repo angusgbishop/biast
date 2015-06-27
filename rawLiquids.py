@@ -24,10 +24,8 @@ def ingredientsSplit(drink_recipie):
     for ingredient in drink_recipie:
         if isSpirit(ingredient[1]):
             spirits.append(ingredient)
-            print '%s is a Spirit' % ingredient[1]
         else:
             mixers.append(ingredient)
-            print '%s is a Mixer' % ingredient[1]
 
     spirits_and_mixers = [spirits, mixers]
 
