@@ -2,6 +2,11 @@
     color: (0,0,0,1)
     font_name: 'data/Roboto-Regular.ttf'
 
+<LoadingImage@Image>:
+
+<DrinkFoundButton@Button>:
+
+
 <DrinkCard@BoxLayout>:
     drink_name: ''
     drink_description:''
@@ -115,6 +120,18 @@
 <SearchScreen>:
     name: 'Search_screen'
     title_text: 'Search'
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_y: 0.9
+        TextInput:
+            size_hint_y: None
+            height: dp(50)
+            text: ''
+            on_text: app.root.search(self.text)
+        BoxLayout:
+            orientation: 'vertical'
+            id: search_results
+
 
 <SettingsScreen>:
     name: 'Settings_screen'
@@ -181,6 +198,8 @@
 <Screens>
     FavouritesScreen:
     SearchScreen:
+        id: search_screen_id
     SettingsScreen:
+        id: setting_screen_id
     DrinkScreen:
         id: drink_screen_id

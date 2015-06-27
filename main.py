@@ -52,6 +52,25 @@ class Screens(ScreenManager):
         else:
             self.current = 'Favourites_screen'
 
+    def search(self, string_to_search):
+        all_drinks = drinks.drink_ids
+
+        search_screen_results = self.ids.search_screen_id.ids.search_results
+
+        drinks_found = ['No drinks found with that name! You can add a new one in the settings page.']
+
+        print 'searching for ', string_to_search
+
+        search_screen_results.clear_widgets()
+
+        for drink_id in all_drinks:
+            drink_name_trunc = drinks.get_drink_name(drink_id)[:len(string_to_search)]
+            print 'checking against:', drink_name_trunc
+            if drink_name_trunc.lower() == string_to_search.lower():
+                print 'Adding button'
+                search_screen_results.add_widget(Factory.Separator())
+                search_screen_results.add_widget(Factory.Label(text=drinks.get_drink_name(drink_id)))
+
 
 class EmptyScreen(Screen):
     title_text = StringProperty('')

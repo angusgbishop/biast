@@ -38,7 +38,7 @@ def get_drink_recipie(drink_id):
 
 def make_drink(drink_id):
     # Calculate volume of cup
-    cup_volume = 500
+    cup_volume = 380
 
     # Calculate Total number of parts per recipe
     total_parts = 0
@@ -47,14 +47,22 @@ def make_drink(drink_id):
 
     # Calculate volume per part
     ingredients_sorted = sorted(drink_recipe[drink_id], key=lambda liquid: liquid[0])
-    vol_per_part = math.floor(cup_volume / total_parts)
+
+    vol_per_part = math.floor(round((cup_volume / total_parts) / 25) * 25)
 
     # Calculate Recipe order
     recipe_order = []
     for liquid in drink_recipe[drink_id]:
         recipe_order.append([liquid[0] * vol_per_part, liquid[1]])
 
-    # Send recipe to arduino
-    print 'Making a drink with',
-    for ingredient in recipe_order:
-        print ' %s ml of %s,' % (ingredient[0], ingredient[1])
+    if vol_per_part == 0:
+        print 'Glass is not big enough for a serving.'
+    else:
+        # Send recipe to arduino
+        volume_sum = 0
+        print 'Making a drink with',
+        for ingredient in recipe_order:
+            print ' %s ml of %s,' % (ingredient[0], ingredient[1])
+            volume_sum += ingredient[0]
+
+        print ' the leftover volume is %s ml' % (cup_volume - volume_sum)
