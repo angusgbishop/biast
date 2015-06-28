@@ -1,4 +1,5 @@
 import math
+import glob
 
 drink_ids = ['ginandtonic', 'rumandcoke']
 
@@ -9,7 +10,7 @@ drink_description = dict(
     rumandcoke='The Cuba Libre, is a highball made of cola, lime, and dark or light rum. This highball is often referred to as a Rum and Coke in the UK where the lime juice may or may not be included. /n Along with the Mojito and the Daiquiri, the Cuba Libre shares the mystery of its exact origin. The only certainty is that this cocktail was first sipped in Cuba. The year? 1900. 1900 is generally said to be the year that cola first came to Cuba, introduced to the island by American troops. But "Cuba Libre!" was the battle cry of the Cuba Liberation Army during the war of independence that ended in 1898.')
 
 drink_img = dict(
-    ginandtonic='data/Drinks/ginAndTonic.png',
+    ginandtonic='data/Drinks/ginandtonic.png',
     rumandcoke='data/Drinks/rumAndCoke.png')
 
 drink_recipe = dict(
@@ -20,12 +21,37 @@ drink_recipe = dict(
 )
 
 
+def import_drink_library():
+    for filename in glob.glob('data/Drinks/library/*.txt'):
+        print filename
+        with open(filename, 'r') as file:
+            for line in file:
+                if line[:8] == 'drink_id':
+                    print line[11:-1]
+                    drink_id = line[11:-1]
+                    drink_ids.append(str(drink_id))
+                elif line[:17] == 'drink_description':
+                    print line[20:]
+                    drink_desc = line[20:]
+                    drink_description[drink_id] = drink_desc
+                elif line[:10] == 'drink_name':
+                    print line[13:]
+                    drink_nme = line[13:]
+                    drink_name[drink_id] = drink_nme
+                elif line[:12] == 'drink_recipe':
+                    print line[15:]
+                    drink_rec = line[15:]
+                    drink_recipe[drink_id] = drink_rec
+
+
 def get_drink_name(drink_id):
     return drink_name[drink_id]
 
 
 def get_drink_img(drink_id):
-    return drink_img[drink_id]
+    image_pathname = 'data/Drinks/%s.*' % drink_id
+    print image_pathname
+    return glob.glob(image_pathname)[0]
 
 
 def get_drink_description(drink_id):

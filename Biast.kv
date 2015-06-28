@@ -5,7 +5,9 @@
 <LoadingImage@Image>:
 
 <DrinkFoundButton@Button>:
-
+    size_hint_y: None
+    height: dp(50)
+    on_release: app.root.enterDrink(root.drink_id)
 
 <DrinkCard@BoxLayout>:
     drink_name: ''
@@ -16,7 +18,6 @@
     pos_hint: {'right':0.9}
     Button:
         on_release: app.root.enterDrink(root.drink_id)
-        font_name: 'data/Roboto-Regular.ttf'
         background_normal: 'data/Drinks/' + root.drink_id + '.png'
     Label:
         id:'DrinkNameCard'
@@ -79,22 +80,6 @@
         background_normal: 'data/UI/settings.png'
 
 
-<FavouritesCarousel@Carousel>:
-    direction: 'right'
-    id: 'favs_carousel'
-    size_hint: (1,0.9)
-    loop: 'True'
-
-    DrinkCard:
-        drink_name: 'Favourite No.1'
-        drink_description: 'The first Favourite'
-        drink_id: 'ginandtonic'
-
-    DrinkCard:
-        drink_name: 'Favourite No 2'
-        drink_description: 'The second favourite'
-        drink_id: 'rumandcoke'
-
 <EmptyScreen>:
     text: self.title_text
     BoxLayout:
@@ -115,7 +100,21 @@
 <FavouritesScreen>:
     name: 'Favourites_screen'
     title_text: 'Favourites'
-    FavouritesCarousel:
+    Carousel:
+        direction: 'right'
+        id: 'favs_carousel'
+        size_hint: (1,0.9)
+        loop: 'True'
+
+        DrinkCard:
+            drink_name: 'Favourite No.1'
+            drink_description: 'The first Favourite'
+            drink_id: 'ginandtonic'
+
+        DrinkCard:
+            drink_name: 'Favourite No 2'
+            drink_description: 'The second favourite'
+            drink_id: 'rumandcoke'
 
 <SearchScreen>:
     name: 'Search_screen'
@@ -128,15 +127,42 @@
             height: dp(50)
             text: ''
             on_text: app.root.search(self.text)
-        BoxLayout:
-            orientation: 'vertical'
-            id: search_results
+        ScrollView:
+            BoxLayout:
+                orientation: 'vertical'
+                id: search_results
 
 
 <SettingsScreen>:
     name: 'Settings_screen'
     title_text: 'Settings'
-
+    BoxLayout:
+        size_hint:(1,0.9)
+        orientation:'horizontal'
+        BoxLayout:
+            padding: dp(10)
+            spacing: dp(5)
+            orientation: 'vertical'
+            Button:
+                text: 'Drink Manager'
+            Separator:
+            Button:
+                text: 'Network Manager'
+            Separator:
+            Button:
+                text: 'About'
+        BoxLayout:
+            padding: dp(10)
+            spacing: dp(5)
+            orientation: 'vertical'
+            Button:
+                text: 'B.I.A.S.T. Setup'
+            Separator:
+            Button:
+                text: 'To Be Added'
+            Separator:
+            Button:
+                text: 'Statistics'
 <DrinkScreen>
     name: 'drink_screen'
     title_text: 'Drink Name'
@@ -188,12 +214,21 @@
 
             Separator:
                 height: dp(2)
-            Label:
-                id: drink_description_id
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                text_size: self.size
-                halign: 'left'
-                valign: 'top'
+            ScrollView:
+                Label:
+                    id: drink_description_id
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    text_size: self.width, None
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    halign: 'left'
+                    valign: 'top'
+
+<SettingsScreen_DrinkManger>:
+    BoxLayout:
+        size_hint: (1,0.9)
+        BoxLayout:
+
 
 <Screens>
     FavouritesScreen:
