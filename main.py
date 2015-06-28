@@ -14,6 +14,7 @@ class Screens(ScreenManager):
     transition = RiseInTransition()
 
     def enterDrink(self, drink_id):
+
         self.current = 'drink_screen'
         drink_screen = self.ids.drink_screen_id
 
@@ -27,8 +28,8 @@ class Screens(ScreenManager):
         drink_screen.ids.drink_spirit_list.clear_widgets()  # Remove any widgets from previous drinks
         drink_screen.ids.drink_mixer_list.clear_widgets()  # Remove any widgets from previous drinks
 
-        spirits = rawLiquids.ingredientsSplit(drinks.get_drink_recipie(drink_id))[0]
-        mixers = rawLiquids.ingredientsSplit(drinks.get_drink_recipie(drink_id))[1]
+        spirits = rawLiquids.ingredientsSplit(drinks.get_drink_recipe(drink_id))[0]
+        mixers = rawLiquids.ingredientsSplit(drinks.get_drink_recipe(drink_id))[1]
         for spirit in spirits:
             drink_screen.ids.drink_spirit_list.add_widget(Factory.Separator())
             drink_screen.ids.drink_spirit_list.add_widget(
@@ -43,14 +44,25 @@ class Screens(ScreenManager):
         statistics.times_made[drink_id] += 1
 
     def backScreen(self):
-        if self.current == "DrinkScreen":
-            previousScreen = self.current
-            self.current = self.previous()
-            self.remove_screen(previousScreen)
-        elif self.current == 'Favourites_screen':
-            pass
-        else:
-            self.current = 'Favourites_screen'
+        self.current = 'Favourites_screen'
+
+    def add_drink(self, drink_name, drink_description, drink_recipe, drink_image):
+        no_whitespace = drink_name.replace(" ", "")
+        new_drink_id = no_whitespace.lower()
+        new_file_path = 'data/Drinks/library/%s.txt' % new_drink_id
+
+        with open(new_file_path, 'w') as new_file:
+            new_file.write('drink_id - %s\n' % new_drink_id)
+            new_file.write('drink_name - %s\n' % drink_name)
+            new_file.write('drink_description - %s\n' % drink_description)
+            new_file.write('drink_recipe - %s\n' % drink_recipe)
+
+        if not new_file.closed:
+            new_file.close()
+
+        drinks.import_drink_library()
+
+        self.current = 'Settings_screen'
 
     def search(self, string_to_search):
         all_drinks = drinks.drink_ids

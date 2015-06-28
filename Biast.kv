@@ -145,6 +145,7 @@
             orientation: 'vertical'
             Button:
                 text: 'Drink Manager'
+                on_release: app.root.current = 'drink_manager'
             Separator:
             Button:
                 text: 'Network Manager'
@@ -163,6 +164,8 @@
             Separator:
             Button:
                 text: 'Statistics'
+
+
 <DrinkScreen>
     name: 'drink_screen'
     title_text: 'Drink Name'
@@ -225,9 +228,66 @@
                     valign: 'top'
 
 <SettingsScreen_DrinkManger>:
+    title_text: 'Drink Manager'
+    name: 'drink_manager'
     BoxLayout:
         size_hint: (1,0.9)
-        BoxLayout:
+        ScrollView:
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: dp(5)
+                Label:
+                    halign: 'left'
+                    size_hint_y: None
+                    height: dp(30)
+                    text: 'Drink Name'
+                TextInput:
+                    id: drink_name_input
+                    size_hint_y: None
+                    height: dp(30)
+                Separator:
+                Label:
+                    halign: 'left'
+                    size_hint_y: None
+                    height: dp(30)
+                    text: 'Drink Description'
+                TextInput:
+                    id: drink_description_input
+                    size_hint_y: None
+                    height: dp(30)
+                Separator:
+                Label:
+                    halign: 'left'
+                    size_hint_y: None
+                    height: dp(30)
+                    text: 'Drink Recipe'
+                TextInput:
+                    id: drink_recipe_input
+                    size_hint_y: None
+                    height: dp(30)
+                Separator:
+                Label:
+                    halign: 'left'
+                    size_hint_y: None
+                    height: dp(30)
+                    text: 'Drink Image'
+                TextInput:
+                    id: drink_image_input
+                    size_hint_y: None
+                    height: dp(30)
+                Separator:
+                BoxLayout:
+                    size_hint_y: None
+                    height: dp(60)
+                    padding: dp(10)
+                    spacing: dp(70)
+                    Button:
+                        text: 'Cancel'
+                        on_release: app.root.current = 'Settings_screen'
+                    Button:
+                        text: 'Add Drink'
+                        on_release: app.root.add_drink(root.ids.drink_name_input.text , root.ids.drink_description_input.text , root.ids.drink_recipe_input.text , root.ids.drink_image_input.text)
+                Label:
 
 
 <Screens>
@@ -238,3 +298,5 @@
         id: setting_screen_id
     DrinkScreen:
         id: drink_screen_id
+    SettingsScreen_DrinkManger:
+        id: SettingsScreen_DrinkManger_id
