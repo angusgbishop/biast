@@ -1,0 +1,94 @@
+int val;
+String str;
+
+X_axis_stepper = Stepper(200,5,6)
+
+void setup() {
+//When Turned on, move y axis until it hits the stop
+
+//When Turned on, move x axis until it hits the stop
+
+//Set current X and Y pos to 0
+x_current_pos = 0
+
+
+    Serial.begin(9600);
+    Serial.write("Power On");
+
+}
+
+int mm_to_steps(int mm){ //Convert input mm into steps for stepper
+    mm_per_step = 0.123;
+   
+    no_of_steps = round(mm/mm_per_step);
+    
+    return no_of_steps;
+}
+
+int move_x_axis_mm(int mm,int smooth){ //Translate the X-axis a certain number of mm, smooth defines if smooth acceleration is used.
+    
+    
+    int steps_to_turn = mm_to_steps(mm);
+
+    int number_of_steps_turned = 0;
+
+    int delay_amount = 0;
+
+    while (number_of_steps_turned <= steps_to_turn);
+	if (smooth)
+	    x_axis_stepper step(1)
+            number_of_steps_turned++
+	    x_current_pos = x_current_pos + 0.123
+
+	    Serial.write(x_current_pos)
+
+            delay_amount = 200 * ((number_of_steps_turned - steps_to_turn)/ steps_to_turn)^4
+
+	    if (delay_amount >= 5) 
+	        delay(delay_amount)
+	else
+	    x_axis_stepper step(1)
+	    number_of_steps_turned++
+}
+
+int x_move_to(int move_to){
+    
+    if (move_to <= 8);
+	
+    else;
+
+	int move_amount = 0;
+	move_amount = move_to - x_current_pos;
+
+	move_x_axis_mm(move_amount,True);
+
+    
+}
+
+void loop() 
+{
+    if(Serial.available() > 0)
+    {
+        str = Serial.readStringUntil('\n');
+	val = Serial.parseInt();
+    }
+    switch (str)
+        case "move_x_to";
+	    void x_move_to(val);
+
+	case "move_y_to;
+	    void y_move_to(val);
+	
+	case "return_to_start";
+	    void y_move_to(0);
+	    void x_move_to(0);
+	
+	case "break";
+	    break;
+
+	case "shutdown";
+	    void x_move_to(0);
+	    void y_move_to(0);
+	    break;
+
+}

@@ -229,8 +229,39 @@
                     halign: 'left'
                     valign: 'top'
 
+<DrinkBox@BoxLayout>:
+    parts: 0
+    size_hint_y: None
+    height: dp(40)
+    padding: 5
+    spacing: dp(5)
+    Label:
+        text: 'Ingredient Name:'
+        size_hint_x: None
+        width: dp(140)
+    TextInput:
+    Label:
+        size_hint_x: None
+        width: dp(60)
+    Button:
+        size_hint_x: None
+        width: dp(50)
+        text:'-'
+        on_release: if root.parts > 0: root.parts -= 1
+    Label:
+        text: 'No. of Parts: ' + str(root.parts)
+        size_hint_x: None
+        width: dp(140)
+    Button:
+        size_hint_x: None
+        width: dp(50)
+        text:'+'
+        on_release: root.parts = root.parts + 1
+
+
 <SettingsScreen_DrinkManger>:
     title_text: 'Drink Manager'
+    id: drink_manager_id
     name: 'drink_manager'
     BoxLayout:
         size_hint: (1,0.9)
@@ -265,16 +296,21 @@
                     text: 'Drink Recipe'
                 BoxLayout:
                     id: drink_recipe_input
+                    orientation: 'vertical'
                     size_hint_y: None
-                    Label:
-                        halign: 'left'
-                        size_hint: (0.7,None)
-                        height: dp(30)
-                        text: 'Drink Recipe'
-                    Button:
-                        on_release: root.ids.drink_recipe_input.add_widget(Factory.BoxLayout())
+                    DrinkBox:
+                    BoxLayout:
                         size_hint_y: None
-                        height: dp(30)
+                        height: dp(40)
+                        padding: 5
+                        Label:
+                            halign: 'left'
+                            size: self.texture_size
+                            text: 'Add new ingredient'
+                        Button:
+                            on_release: app.root.add_drink_box()
+                            size_hint_x: 0.4
+
                 Separator:
                 Label:
                     halign: 'left'
