@@ -12,11 +12,6 @@ drink_recipe = {}
 
 
 def import_drink_library():
-    drink_ids = []  # Clear Values
-    drink_name = {}
-    drink_description = {}
-    drink_img = {}
-    drink_recipe = {}
 
     for filename in glob.glob('data/Drinks/library/*.txt'):
         print filename

@@ -66,7 +66,7 @@ class Screens(ScreenManager):
 
     def search(self, string_to_search):
         all_drinks = drinks.drink_ids
-
+        print all_drinks
         search_screen_results = self.ids.search_screen_id.ids.search_results
 
         drinks_found = ['No drinks found with that name! You can add a new one in the settings page.']

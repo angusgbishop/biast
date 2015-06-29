@@ -1,3 +1,5 @@
+#:import Factory kivy.factory
+
 <Label>:
     color: (0,0,0,1)
     font_name: 'data/Roboto-Regular.ttf'
@@ -261,10 +263,18 @@
                     size_hint_y: None
                     height: dp(30)
                     text: 'Drink Recipe'
-                TextInput:
+                BoxLayout:
                     id: drink_recipe_input
                     size_hint_y: None
-                    height: dp(30)
+                    Label:
+                        halign: 'left'
+                        size_hint: (0.7,None)
+                        height: dp(30)
+                        text: 'Drink Recipe'
+                    Button:
+                        on_release: root.ids.drink_recipe_input.add_widget(Factory.BoxLayout())
+                        size_hint_y: None
+                        height: dp(30)
                 Separator:
                 Label:
                     halign: 'left'
