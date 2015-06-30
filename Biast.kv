@@ -232,8 +232,8 @@
 <DrinkBox@BoxLayout>:
     parts: 0
     size_hint_y: None
-    height: dp(40)
-    padding: 5
+    height: dp(30)
+    padding: dp(5),0
     spacing: dp(5)
     Label:
         text: 'Ingredient Name:'
@@ -269,6 +269,7 @@
             BoxLayout:
                 orientation: 'vertical'
                 spacing: dp(5)
+                padding: dp(5),0
                 Label:
                     halign: 'left'
                     size_hint_y: None
@@ -294,22 +295,29 @@
                     size_hint_y: None
                     height: dp(30)
                     text: 'Drink Recipe'
-                BoxLayout:
-                    id: drink_recipe_input
-                    orientation: 'vertical'
-                    size_hint_y: None
-                    DrinkBox:
+                ScrollView:
                     BoxLayout:
-                        size_hint_y: None
-                        height: dp(40)
-                        padding: 5
-                        Label:
-                            halign: 'left'
-                            size: self.texture_size
-                            text: 'Add new ingredient'
-                        Button:
-                            on_release: app.root.add_drink_box()
-                            size_hint_x: 0.4
+                        id: drink_recipe_input
+                        orientation: 'vertical'
+                        spacing: dp(5)
+                        
+                        DrinkBox:
+                        BoxLayout:
+                            size_hint_y: None
+                            height: dp(30)
+                            padding: dp(5),0
+                            orientation: 'vertical'
+                            Label:
+                                size_hint_y: None
+                                height: dp(5)
+                            BoxLayout:
+                                Label:
+                                    halign: 'left'
+                                    size: self.texture_size
+                                    text: 'Add new ingredient'
+                                Button:
+                                    on_release: app.root.add_drink_box()
+                                    size_hint_x: 0.4
 
                 Separator:
                 Label:
@@ -333,7 +341,7 @@
                     Button:
                         text: 'Add Drink'
                         on_release: app.root.add_drink(root.ids.drink_name_input.text , root.ids.drink_description_input.text , root.ids.drink_recipe_input.text , root.ids.drink_image_input.text)
-                Label:
+                #Label:
 
 
 <Screens>
@@ -345,4 +353,4 @@
     DrinkScreen:
         id: drink_screen_id
     SettingsScreen_DrinkManger:
-        id: SettingsScreen_DrinkManger_id
+        id: drink_manager_id

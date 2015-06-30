@@ -88,7 +88,7 @@ class Screens(ScreenManager):
         search_screen_results.add_widget(Factory.Label())
 
     def add_drink_box(self):
-        self.ids.drink_manager_id.ids.drink_recipe_input.add_widget(Factory.DrinkBox())
+        self.ids.drink_manager_id.ids.drink_recipe_input.add_widget(Factory.DrinkBox(),1)
 
 class EmptyScreen(Screen):
     title_text = StringProperty('')
