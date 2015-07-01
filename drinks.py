@@ -34,6 +34,10 @@ def import_drink_library():
                     drink_rec = line[15:]
                     drink_recipe[drink_id] = eval(drink_rec)
 
+                if line == file[3]:
+                    break
+
+
 
 def get_drink_name(drink_id):
     return drink_name[drink_id]

@@ -1,4 +1,4 @@
-import json
+import time
 
 times_made = dict(
     ginandtonic=1,
@@ -19,4 +19,7 @@ def close_statistics(stat_file):
 
 
 def drink_made(drink_id):
-    stat_file = open_statistics(drink_id)
+    timeanddate = time.struftime("Drink made: %a, %H:%M:%S")
+    filepath = 'data/Drinks/library/%s.txt' % drink_id
+    with open(filepath, 'a') as statfile:
+        statfile.write(timeanddate)

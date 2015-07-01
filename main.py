@@ -54,11 +54,10 @@ class Screens(ScreenManager):
         drink_recipe = []
 
         for input_box in drink_recipe_children:
-            if iterationnumber != 0:
                 drink_recipe.append([input_box.parts, input_box.ingredient_name])
-            iterationnumber += 1
 
         with open(new_file_path, 'w') as new_file:
+
             new_file.write('drink_id - %s\n' % new_drink_id)
             new_file.write('drink_name - %s\n' % drink_name)
             new_file.write('drink_description - %s\n' % drink_description)
