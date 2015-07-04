@@ -2,3 +2,4 @@ drink_id - ginandtonic
 drink_name - Gin & Tonic
 drink_description - A gin and tonic is a highball cocktail made with gin and tonic water poured over ice. The cocktail was introduced by the army of the British East India Company in India. In India and other tropical regions, malaria was a persistent problem. In the 1700s it was discovered that quinine could be used to prevent and treat the disease, although the bitter taste was unpleasant. British officers in India in the early 19th century took to adding a mixture of water, sugar, lime and gin to the quinine in order to make the drink more palatable. Soldiers in India were already given a gin ration, and the sweet concoction made sense. Since it is no longer used as an antimalarial, tonic water today contains much less quinine, is usually sweetened, and is consequently much less bitter.
 drink_recipe - [[1, 'Gin'],[3, 'Tonic Water']]
+END OF DRINK DEFINITION

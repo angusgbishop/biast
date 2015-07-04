@@ -1,5 +1,6 @@
 import math
 import glob
+import arduino_coms
 
 drink_ids = []
 
@@ -33,8 +34,7 @@ def import_drink_library():
                     print line[15:]
                     drink_rec = line[15:]
                     drink_recipe[drink_id] = eval(drink_rec)
-
-                if line == file[3]:
+                elif line == 'END OF DRINK DEFINITION':
                     break
 
 
@@ -90,3 +90,5 @@ def make_drink(drink_id):
             volume_sum += ingredient[0]
 
         print ' the leftover volume is %s ml' % (cup_volume - volume_sum)
+
+    arduino_coms.make_recipe(recipe_order)

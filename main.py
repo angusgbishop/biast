@@ -41,7 +41,7 @@ class Screens(ScreenManager):
     def make_drink(self, drink_id):
 
         drinks.make_drink(drink_id)
-        statistics.times_made[drink_id] += 1
+        statistics.drink_made(drink_id)
 
     def backScreen(self):
         self.current = 'Favourites_screen'
@@ -62,6 +62,7 @@ class Screens(ScreenManager):
             new_file.write('drink_name - %s\n' % drink_name)
             new_file.write('drink_description - %s\n' % drink_description)
             new_file.write('drink_recipe - %s\n' % drink_recipe)
+            new_file.write('END OF DRINK DEFINITION')
 
         if not new_file.closed:
             new_file.close()
