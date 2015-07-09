@@ -1,0 +1,5 @@
+drink_id - portoflip
+drink_name - Porto Flip
+drink_description - A Porto flip is a type of alcoholic beverage. It is typically made with brandy, ruby port, and one egg yolk.
+drink_recipe - [[3, 'Brandy'],[8, 'Port'],[2, 'Egg Yolk']]
+END OF DRINK DEFINITION

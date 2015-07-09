@@ -1,0 +1,5 @@
+drink_id - leitedeonca
+drink_name - Leite de onça (Jaguar milk)
+drink_description - Leite de onça (Jaguar milk) is a cold Brazilian drink made of cachaça and condensed milk. It is very sweet and has a very suave scent that evokes the homely atmosphere of a Festa Junina. It is not easy to replace the ingredients and achieve a similar result because its taste is very peculiar. It is usually served cold, in plain mugs, without garnish (though often cinnamon or chocolate powder is sprinkled over) so that it looks like milk at a first glance.
+drink_recipe - [[1, 'Cachaça'],[1, 'Milk'],[1, 'Cocoa Liquer']]
+END OF DRINK DEFINITION

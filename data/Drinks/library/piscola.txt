@@ -1,0 +1,5 @@
+drink_id - piscola
+drink_name - Piscola
+drink_description - Piscola or Combinado Nacional (national mix) is a highball cocktail, made of pisco and most commonly a cola drink, that is popular in Chile. A piscola may be black or white depending if it is mixed with a cola or ginger ale, Tonic, Sprite or a similar soft drink. 
+drink_recipe - [[1, 'Brandy'],[2, 'Coke']]
+END OF DRINK DEFINITION

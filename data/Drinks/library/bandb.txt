@@ -1,0 +1,5 @@
+drink_id - bandb
+drink_name - B & B
+drink_description - A "B and B" is made from equal parts of cognac (brandy) and Bénédictine. It is typically served on the rocks, but may also be served straight. The producers of Bénédictine market this cocktail ready-mixed under the label "B & B."
+drink_recipe - [[1, 'Cognac'],[1, 'Bénédictine']]
+END OF DRINK DEFINITION

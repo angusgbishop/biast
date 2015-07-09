@@ -1,0 +1,5 @@
+drink_id - gimlet
+drink_name - Gimlet
+drink_description - The gimlet is a cocktail made of gin and lime juice. A 1928 description of the drink was: "gin, a spot of lime, and soda."[1] The description in the 1953 Raymond Chandler novel The Long Goodbye stated that "a real gimlet is half gin and half Rose's lime juice and nothing else".[2] A variant of the cocktail, the vodka gimlet, replaces gin with vodka. A very similar cocktail using rum instead of vodka or gin—as well as fresh lime juice—is the daiquiri.
+drink_recipe - [[4, 'Gin'],[1, 'Lime Juice'],[1, 'Sugar Syrup']]
+END OF DRINK DEFINITION

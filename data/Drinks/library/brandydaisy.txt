@@ -1,0 +1,5 @@
+drink_id - brandydaisy
+drink_name - Brandy Daisy
+drink_description - The Brandy Daisy is a cocktail which first gained popularity in the late 19th century. One of the earliest known recipes was published in 1876 in the second edition of Jerry Thomas's The Bartenders Guide or How To Mix Drinks. 
+drink_recipe - [[2, 'Brandy'],[1, 'Chartreuse'],[1, 'Lemon Juice']]
+END OF DRINK DEFINITION

@@ -1,0 +1,5 @@
+drink_id - jackrose
+drink_name - Jack Rose
+drink_description - Jack Rose is the name of a classic cocktail, popular in the 1920s and 1930s, containing applejack, grenadine, and lemon or lime juice. It notably appeared in a scene in Ernest Hemingway's 1926 classic, The Sun Also Rises, in which Jake Barnes, the narrator, drinks a Jack Rose in the Crillon Paris hotel bar while awaiting the arrival of Lady Brett Ashley. It was also a favorite drink of author John Steinbeck.
+drink_recipe - [[4, 'Applejack'],[2, 'Lemon Juice'],[1, 'Grenadine']]
+END OF DRINK DEFINITION

@@ -1,5 +1,6 @@
 from kivy.app import App
 
+
 from kivy.properties import StringProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import ScreenManager, Screen, RiseInTransition
@@ -149,7 +150,6 @@ class SettingsScreen_DrinkManger(EmptyScreen):
 
 class DrinkCard(BoxLayout):
     pass
-
 
 class BiastApp(App):
     def build(self):

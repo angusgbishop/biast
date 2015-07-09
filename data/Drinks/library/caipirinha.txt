@@ -1,0 +1,5 @@
+drink_id - caipirinha
+drink_name - Caipirinha
+drink_description - Caipirinha is Brazil's national cocktail, made with cachaça (sugar cane hard liquor), sugar and lime. Although the real origin of caipirinha as we know it today is unknown, according to one account it began around 1918 in the state of São Paulo with a popular recipe made with lime, garlic and honey, indicated for patients with the Spanish flu; Today it is still being used as a remedy for the common cold.
+drink_recipe - [[5, 'Cachaça'],[1, 'Lime Juice']]
+END OF DRINK DEFINITION

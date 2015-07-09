@@ -1,0 +1,5 @@
+drink_id - 20thcentury
+drink_name - 20th Century
+drink_description - A cocktail created in 1937 by a British bartender named C.A. Tuck, and named in honor of the celebrated Twentieth Century Limited train which ran between New York City and Chicago from 1902 until 1967. The recipe was first published in 1937 in the Café Royal Cocktail Book by William J. Tarling, President of the United Kingdom Bartenders' Guild and head bartender at the Café Royal.
+drink_recipe - [[2, 'Gin'],[1, 'Kina Lillet'],[1, 'Creme de Cacao'],[1, 'Lemon Juice']]
+END OF DRINK DEFINITION

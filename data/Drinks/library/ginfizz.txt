@@ -1,0 +1,5 @@
+drink_id - ginfizz
+drink_name - Gin Fizz
+drink_description - The Casino is an IBA official cocktail made with gin, maraschino liqueur, orange bitters and fresh lemon juice.
+drink_recipe - [[4, 'Gin'],[3, 'Lemon Juice'],[1, 'Sugar Syrup'],[8,'Soda Water']]
+END OF DRINK DEFINITION

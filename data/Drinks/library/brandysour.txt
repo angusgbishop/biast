@@ -1,0 +1,5 @@
+drink_id - brandysour
+drink_name - Brandy Sour
+drink_description - The Brandy Sour is a mixed alcoholic cocktail that vies with the ouzini[1] to be considered the unofficial national cocktail of Cyprus.[2][3] While other forms of the Brandy Sour cocktail exist, the Cypriot variety is a distinct mixture, which only shares the basic brandy and lemon flavourings with other variants. Both brandy and lemons are among Cyprus's major exports, and both have distinctive Cypriot characteristics.
+drink_recipe - [[2, 'Brandy'],[1, 'Lemon Squash'],[7, 'Soda Water']]
+END OF DRINK DEFINITION

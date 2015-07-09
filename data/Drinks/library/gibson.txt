@@ -1,0 +1,5 @@
+drink_id - gibson
+drink_name - Gibson
+drink_description - The Gibson is a mixed drink made with gin and vermouth, and often garnished with a pickled onion. The oldest published recipe for the Gibson is found in the 1908 book, The World's Drinks And How To Mix Them by William Boothby. Other pre-prohibition recipes for the Gibson exist. They all omit bitters and none of them garnishes with an onion. Some garnish with citrus twists. Others use no garniture at all. No known recipe for the Gibson garnishes with an onion before 1922. Some sources persist in using other garnishment than the onion into the 1930s and beyond, but still none use bitters.
+drink_recipe - [[6, 'Gin'],[1, 'Dry Vermouth']]
+END OF DRINK DEFINITION

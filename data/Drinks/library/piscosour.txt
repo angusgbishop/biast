@@ -1,0 +1,5 @@
+drink_id - piscosour
+drink_name - Pisco Sour
+drink_description - A Pisco Sour is a cocktail typical of South American cuisine. The cocktail originated in Lima, Peru, and was invented by Victor Vaughen Morris, an American bartender, in the early 1920s. Morris left the United States in 1903 to work in Cerro de Pasco, a city in central Peru. In 1916, he opened Morris' Bar in Lima, and his saloon quickly became a popular spot for the Peruvian upper class and English-speaking foreigners. The Pisco Sour underwent several changes until Mario Bruiget, a Peruvian bartender working at Morris' Bar, created the modern Peruvian recipe of the cocktail in the latter part of the 1920s by adding Angostura bitters and egg whites to the mix.
+drink_recipe - [[9, 'Brandy'],[6, 'Lemon Juice'],[4, 'Sugar Syrup']]
+END OF DRINK DEFINITION

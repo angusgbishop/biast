@@ -1,0 +1,5 @@
+drink_id - aviation
+drink_name - Aviation
+drink_description - The Aviation was created by Hugo Ensslin, head bartender at the Hotel Wallick in New York, in the early twentieth century. The first published recipe for the drink appeared in Ensslin's 1916 Recipes for Mixed Drinks. Ensslin's recipe called for 1½ oz. El Bart gin, ¾ oz. lemon juice, 2 dashes maraschino liqueur, and 2 dashes crème de violette, a violet liqueur which gives the cocktail a pale purple color. Omitting the cherry liquor changes the drink into a blue moon which is a grey color.
+drink_recipe - [[3, 'Gin'],[1, 'Lemon Juice'],[1, 'Cherry Liqueur']]
+END OF DRINK DEFINITION

@@ -1,0 +1,5 @@
+drink_id - sazerac
+drink_name - Sazerac
+drink_description - The Sazerac is a local New Orleans variation of a Cognac or whiskey cocktail, named for the Sazerac de Forge et Fils brand of Cognac brandy that served as its original main ingredient. The drink is most traditionally a combination of cognac or rye, absinthe, Peychaud's Bitters, and sugar, although bourbon whiskey and/or Herbsaint are sometimes substituted. Some claim it is the oldest known American cocktail, with origins in pre–Civil War New Orleans.
+drink_recipe - [[5, 'Cognac'],[1, 'Absinthe']]
+END OF DRINK DEFINITION

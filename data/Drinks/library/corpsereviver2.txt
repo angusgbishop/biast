@@ -1,0 +1,5 @@
+drink_id - corpsereviver2
+drink_name - Corpse Reviver #2
+drink_description - The Corpse Reviver family of cocktails are intended as 'hair of the dog' hangover cures. The Corpse Reviver #2 is the more popular of the corpse revivers, and consists of equal parts gin, lemon juice, triple sec (commonly Cointreau), Kina Lillet, and a dash of absinthe.
+drink_recipe - [[1, 'Gin'],[1, 'Lemon Juice'],[1, 'Triple Sec'],[1, 'Kina Lillet']]
+END OF DRINK DEFINITION

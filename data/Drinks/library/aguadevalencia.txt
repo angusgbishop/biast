@@ -1,0 +1,5 @@
+drink_id - aguadevalencia
+drink_name - Agua de Valencia
+drink_description - Valencian Water (Valencian, Aigua de València. Spanish, Agua de Valencia) is a cocktail made from a base of cava or champagne, orange juice, vodka, and gin. In general, it is served in pitchers of various sizes and is drunk in a broad cocktail glass. It was made for the first time in 1959 by Constante Gil in the bar Café Madrid de Valencia in the city of Valencia, Spain.
+drink_recipe - [[4, 'Orange Juice'],[1, 'Gin'],[1, 'Vodka'],[14, 'Cava']]
+END OF DRINK DEFINITION

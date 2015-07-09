@@ -1,0 +1,5 @@
+drink_id - orgasm
+drink_name - Orgasm
+drink_description - The Orgasm is a cocktail that can be served either on the rocks or layered and drunk as a shooter. Since 2011, the cocktail is no longer part of the "official IBA cocktails" of the International Bartenders Association (IBA).
+drink_recipe - [[1, 'Amaretto'],[1, 'Coffee Liqueur'],[1, 'Baileys Irish Cream']]
+END OF DRINK DEFINITION

@@ -1,0 +1,5 @@
+drink_id - angelface
+drink_name - Angel Face
+drink_description - The Angel Face is a cocktail made from Gin, Apricot brandy and Calvados in equal amounts.
+drink_recipe - [[1, 'Gin'],[1, 'Apricot Brandy'],[1, 'Calvados']]
+END OF DRINK DEFINITION

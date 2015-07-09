@@ -1,0 +1,5 @@
+drink_id - batida
+drink_name - Batida
+drink_description - Batida is a Brazilian cocktail made with the national alcoholic drink cachaça. In Portuguese, batida means shaken or milkshake (In a different context, the word also means a crash, usually used when referring to a car crash). It is made with cachaça, fruit juice (or coconut milk), and sugar. It can be blended or shaken with ice.
+drink_recipe - [[2, 'Cachaça'],[1, 'Lemon Juice']]
+END OF DRINK DEFINITION

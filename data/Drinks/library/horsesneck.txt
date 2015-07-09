@@ -1,0 +1,5 @@
+drink_id - horsesneck
+drink_name - Horse's Neck
+drink_description - A Horse's Neck is an American cocktail recognised by the IBA, identifiably sporting a long, curling strip of lemon rind. Dating back to the 1890s, it was a non-alcoholic mixture of ginger ale, ice and lemon peel. By the 1910s, brandy, or bourbon would be added for a 'Horse's Neck with a Kick' or ~ Stiff. The non-alcoholic version was still served in upstate New York in the late 50s or early 60s, but eventually it was phased out.
+drink_recipe - [[1, 'Brandy'],[3, 'Ginger ale']]
+END OF DRINK DEFINITION

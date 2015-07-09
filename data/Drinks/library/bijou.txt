@@ -1,0 +1,5 @@
+drink_id - bijou
+drink_name - Bijou
+drink_description - A bijou is a mixed alcoholic drink composed of gin, vermouth, and chartreuse. Bijou means "jewel" in French. It is said to have been invented by Harry Johnson. This cocktail is called Bijou because it combines the colors of three jewels: gin for diamond, vermouth for ruby, and chartreuse for emerald. An original-style Bijou is made stirred with ice as Harry Johnson's 1900 "New and Improved Bartender Manual" states "mix well with a spoon and serve." This recipe is also one of the oldest in the manual dating back to 1890's.
+drink_recipe - [[1, 'Gin'],[1, 'Green Charteuse'],[1, 'Sweet Vermouth']]
+END OF DRINK DEFINITION

@@ -1,0 +1,5 @@
+drink_id - earthquake
+drink_name - Earthquake
+drink_description - The Tremblement de Terre (or "Earthquake") Cocktail has been attributed to the French Post-Impressionist painter Henri de Toulouse-Lautrec. The name is derived from its effects, which tend to "shake up" the drinker.
+drink_recipe - [[1, 'Absinthe'],[1, 'Cognac']]
+END OF DRINK DEFINITION

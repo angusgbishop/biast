@@ -1,0 +1,5 @@
+drink_id - singaporesling
+drink_name - Singapore Sling
+drink_description - The Singapore Sling is a cocktail named after the place where the drink was developed. This long drink was developed sometime before 1915 by Ngiam Tong Boon, a Hainanese bartender working at the Long Bar in Raffles Hotel, Singapore. It was initially called the gin sling, - a sling was originally an American drink composed of spirit and water, sweetened and flavored.
+drink_recipe - [[6, 'Gin'],[3, 'Cherry Liqueur'],[1, 'Triple Sec'],[1, 'Bénédictine'],[2, 'Grenadine'],[24, 'Pineapple Juice'],[3, 'Lime Juice']]
+END OF DRINK DEFINITION

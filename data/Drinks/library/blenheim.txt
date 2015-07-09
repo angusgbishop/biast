@@ -1,0 +1,5 @@
+drink_id - blenheim
+drink_name - The Blenheim
+drink_description - The Blenheim is a cocktail created bu Joe Gilmore for Sir Winston Churchill’s ninetieth birthday. It is also known as the Four Score and Ten.
+drink_recipe - [[3, 'Brandy'],[2, 'Yellow Chartreuse'],[1, 'Kina Lillet'],[1, 'Orange Juice'],[1, 'Dubonnet']]
+END OF DRINK DEFINITION

@@ -1,0 +1,5 @@
+drink_id - stinger
+drink_name - Stinger
+drink_description - A stinger is a Duo cocktail made by adding crème de menthe to a spirit. The classic recipe is based on brandy and white crème de menthe, shaken and served in a cocktail glass. The origins of this drink are unclear, but it is mentioned in bartender's recipe books as far back as Tom Bullock's Ideal Bartender, published in 1917.
+drink_recipe - [[5, 'Brandy'],[2, 'Crème de Menthe']]
+END OF DRINK DEFINITION

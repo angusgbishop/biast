@@ -1,0 +1,5 @@
+drink_id - mimosa
+drink_name - Mimosa
+drink_description - A Mimosa is a cocktail composed of one part champagne (or other sparkling wine) and one part chilled citrus fruit juice, usually orange juice unless otherwise specified (e.g. a grapefruit juice mimosa). It is traditionally served in a tall champagne flute with a morning brunch, to guests at weddings, or as part of '1st Class' service on some passenger railways and airlines.
+drink_recipe - [[1, 'Champagne'],[1, 'Orange Juice']]
+END OF DRINK DEFINITION

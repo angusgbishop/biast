@@ -1,0 +1,5 @@
+drink_id - brandymanhatten
+drink_name - Brandy Manhatten
+drink_description - A Brandy Manhattan is a variation on the classic 'Manhattan' cocktail, made with Brandy instead of whiskey and is very popular in Wisconsin and Minnesota.
+drink_recipe - [[5, 'Brandy'],[2, 'Sweet Red Vermouth']]
+END OF DRINK DEFINITION

@@ -1,0 +1,5 @@
+drink_id - kirroyal
+drink_name - Kir Royal
+drink_description - Kir Royal is a French cocktail, a variation on Kir. It consists of crème de cassis topped with champagne, rather than the white wine used in traditional Kir.[1][2][3] The apéritif is typically served in a flute glass.
+drink_recipe - [[9, 'Champagne'],[1, 'Crème de Cassis']]
+END OF DRINK DEFINITION

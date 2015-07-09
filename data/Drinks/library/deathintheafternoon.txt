@@ -1,0 +1,5 @@
+drink_id - deathintheafternoon
+drink_name - Death in the Afternoon
+drink_description - Death in the Afternoon, also called the Hemingway or the Hemingway Champagne, is a cocktail made up of absinthe and Champagne invented by Ernest Hemingway. The cocktail shares a name with Hemingway's book Death in the Afternoon, and the recipe published in So Red the Nose, or Breath in the Afternoon, 1935 cocktail book with contributions from famous authors. The cocktail is milky in appearance on account of the spontaneous emulsification of the absinthe (or substitute), and bubbly, which it takes from the Champagne.
+drink_recipe - [[1, 'Absinthe'],[5, 'Champagne']]
+END OF DRINK DEFINITION

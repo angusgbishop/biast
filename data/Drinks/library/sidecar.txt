@@ -1,0 +1,5 @@
+drink_id - sidecar
+drink_name - Sidecar
+drink_description - The Sidecar is a cocktail traditionally made with cognac, orange liqueur (Cointreau, Grand Marnier, Grand Gala or another triple sec), and lemon juice. The exact origin of the Sidecar is unclear, but it is thought to have been invented around the end of World War I in either London or Paris. The drink was directly named for the motorcycle attachment, the drink appears in literature as early as 1907. The Ritz Hotel in Paris claims origin of the drink. The first recipes for the Sidecar appear in 1922, in Harry MacElhone's Harry's ABC of Mixing Cocktails and Robert Vermeire's Cocktails and How to Mix Them. It is one of six basic drinks listed in David A. Embury's The Fine Art of Mixing Drinks (1948).
+drink_recipe - [[5, 'Brandy'],[2, 'Triple Sec'],[2, 'Lemon Juice']]
+END OF DRINK DEFINITION

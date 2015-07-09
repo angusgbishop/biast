@@ -1,0 +1,5 @@
+drink_id - brandydaisy
+drink_name - Brandy Daisy
+drink_description - Curacao Punch is a cocktail that comes from Harry Johnson's New and Improved Bartender's Manual (1882). Dale DeGroff, one of the most famous barmen in the world and author of The Craft of the Cocktail (Clarkson Potter, 2002), holds this to be his favorite forgotten potation.
+drink_recipe - [[1, 'Soda Water'],[1, 'Brandy'],[2, 'Orange Curacao'],[1, 'Dark Rum']]
+END OF DRINK DEFINITION

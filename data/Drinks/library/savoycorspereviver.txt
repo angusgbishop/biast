@@ -1,0 +1,5 @@
+drink_id - savoycorpsereviver
+drink_name - Savoy Corpse Reviver
+drink_description - The Corpse Reviver family of cocktails are intended as 'hair of the dog' hangover cures. This recipe is a variation invented by The Savoy Hotel's Head Barmen, Joe Gilmore in 1954.
+drink_recipe - [[1, 'Brandy'],[1, 'Fernet Branca'],[1, 'Crème de menthe']]
+END OF DRINK DEFINITION

@@ -1,4 +1,4 @@
-import pySerial
+#import pySerial
 import setup
 
 

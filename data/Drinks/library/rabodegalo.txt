@@ -1,0 +1,5 @@
+drink_id - rabodegalo
+drink_name - Rabo-de-galo
+drink_description - Rabo-de-galo, which means "cock tail" (in Brazilian Portuguese cocktail is called coquetel), is a Brazilian drink made of cachaça and red vermouth. Alternatively, is known as a mixture of "everything you have in the bar" in some places. It is questionable whether the proportions in rabo-de-galo have ever been formally established. Most bartenders will simply "eyeball" the two ingredients, adjusting the proportions to the customer's taste. 
+drink_recipe - [[2, 'Cachaça'],[1, 'vermouth']]
+END OF DRINK DEFINITION

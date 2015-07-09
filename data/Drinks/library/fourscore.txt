@@ -1,0 +1,5 @@
+drink_id - fourscore
+drink_name - Four Score
+drink_description - The Four Score is a drink created by the Savoy Head Bartender Joe Gilmore. It was created to celebrate Sir Winston Churchill’s eightieth birthday.
+drink_recipe - [[3, 'Brandy'],[2, 'Kina Lillet'],[2, 'Yellow Chartreuse']]
+END OF DRINK DEFINITION

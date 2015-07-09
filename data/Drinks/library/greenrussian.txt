@@ -1,0 +1,5 @@
+drink_id - greenrussian
+drink_name - Green Russian
+drink_description - A Green Russian is a cocktail of absinthe and milk. The specific mix ratio isn't specific, but many follow the same ratio as Black Russian (because of only having 2 components) even though it reassembles a White Russian closer with the dairy part; with five parts absinthe (alcohol, vodka in the Black Russian) to two parts milk (softener, coffee liqueur), This drink is believed to have been created in the animated TV show 'Archer'.
+drink_recipe - [[5, 'Absinthe'],[2, 'Milk']]
+END OF DRINK DEFINITION

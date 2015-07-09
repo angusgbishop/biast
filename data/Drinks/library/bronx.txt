@@ -1,0 +1,5 @@
+drink_id - bronx
+drink_name - Bronx Cocktail
+drink_description - The Bronx Cocktail is essentially a Perfect Martini with orange juice added. It was ranked number three in "The World's 10 Most Famous Cocktails in 1934", making it a very popular rival to the Martini (#1) and the Manhattan (#2). Today, it remains a popular choice in some markets, and was formerly designated as an Official Cocktail by the International Bartender Association. Like the Manhattan, the Bronx is one of five cocktails named for one of New York City's five boroughs, but is perhaps most closely related to the Queens, which substitutes pineapple for the Bronx's orange.
+drink_recipe - [[6, 'Gin'],[3, 'Sweet Red Vermouth'],[2, 'Dry Vermouth'],[3, 'Orange Juice']]
+END OF DRINK DEFINITION

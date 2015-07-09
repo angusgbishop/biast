@@ -1,0 +1,5 @@
+drink_id - french75
+drink_name - French 75
+drink_description - French 75 is a cocktail made from gin, Champagne, lemon juice, and sugar. It is also called a 75 Cocktail, or in French simply a Soixante Quinze (Seventy Five). The drink dates to World War I, and an early form was created in 1915 at the New York Bar in Paris—later Harry's New York Bar—by barman Harry MacElhone. The combination was said to have such a kick that it felt like being shelled with the powerful French 75mm field gun.
+drink_recipe - [[3, 'Gin'],[6, 'Champagne'],[2, 'Lemon Juice']]
+END OF DRINK DEFINITION

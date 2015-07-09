@@ -1,0 +1,5 @@
+drink_id - casino
+drink_name - Casino
+drink_description - The Casino is an IBA official cocktail made with gin, maraschino liqueur, orange bitters and fresh lemon juice.
+drink_recipe - [[4, 'Gin'],[1, 'Lime Juice'],[1, 'Sugar Syrup']]
+END OF DRINK DEFINITION

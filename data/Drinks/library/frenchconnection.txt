@@ -1,0 +1,5 @@
+drink_id - frenchconnection
+drink_name - French Connection
+drink_description - A French Connection is a cocktail made with equal parts Cognac and Amaretto liqueur.
+drink_recipe - [[1, 'Cognac'],[1, 'Amaretto']]
+END OF DRINK DEFINITION

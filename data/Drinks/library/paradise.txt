@@ -1,0 +1,5 @@
+drink_id - paradise
+drink_name - Paradise
+drink_description - The Paradise is an IBA official cocktail, and is classified as a "pre-dinner" drink, an apéritif. The earliest known in-print recipe for the Paradise Cocktail was written by Harry Craddock. This cocktail is prepared using gin, apricot brandy (apricot liqueur), and orange juice in a 2:1:1 ratio, with a splash of lemon juice.
+drink_recipe - [[7, 'Gin'],[4, 'Apricot Brandy'],[3, 'Orange Juice']]
+END OF DRINK DEFINITION

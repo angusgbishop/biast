@@ -1,0 +1,5 @@
+drink_id - bloodhound
+drink_name - Bloodhound
+drink_description - A Bloodhound is a cocktail made with gin, vermouth and strawberry coulis. This drink was at its most fashionable in London in the 1920s, and is regarded as an acquired taste by many.
+drink_recipe - [[2, 'Gin'],[1, 'Dry Vermouth'],[1, 'Sweet Vermouth'],[3, 'Strawberry Coulis']]
+END OF DRINK DEFINITION

@@ -1,0 +1,5 @@
+drink_id - brandyalexander
+drink_name - Brandy Alexander
+drink_description - A Brandy Alexander is a brandy-based cocktail consisting of cognac and crème de cacao that became popular during the early 20th century. It is a variation of an earlier, gin-based cocktail called simply an Alexander. There are many rumors about its origins. It was supposedly created at the time of the wedding of Princess Mary and Viscount Lascelles, in London, in 1922. However, drama critic and Algonquin Round Table member Alexander Woollcott claimed that it was named after him. Other stories say it was named after the Russian tsar Alexander II.
+drink_recipe - [[1, 'Cognac'],[1, 'Crème de cacao'],[1, 'Fresh Cream']]
+END OF DRINK DEFINITION

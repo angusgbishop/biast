@@ -1,0 +1,5 @@
+drink_id - chicagococktail
+drink_name - Chicago Cocktail
+drink_description - The Chicago Cocktail is a brandy-based mixed drink probably named for the city of Chicago, Illinois. It has been documented in numerous cocktail manuals dating back to the 19th century. Chicago restaurant critic John Drury included it in his 1931 guide Dining in Chicago, noting that it had been served at the American Bar in Nice and the Embassy Club in London. Whether it originated in Chicago is unknown.
+drink_recipe - [[2, 'Brandy'],[1, 'Champagne']]
+END OF DRINK DEFINITION

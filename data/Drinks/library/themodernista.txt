@@ -1,0 +1,5 @@
+drink_id - themodernista
+drink_name - The Modernista (Modern Maid)
+drink_description - The Modernista (also known as the Modern Maid Cocktail) is a scotch-pastis cocktail. It is a bitter cocktail with proportions of rum-based Swedish Punsch.
+drink_recipe - [[4, 'Scotch Whiskey'],[1, 'Dark Rum'],[1, 'Punsch'],[1, 'Lemon Juice']]
+END OF DRINK DEFINITION
