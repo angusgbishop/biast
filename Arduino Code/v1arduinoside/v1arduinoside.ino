@@ -3,16 +3,34 @@
   int val;
   int str;
   
-Stepper x_axis_stepper = Stepper(200, 5, 6);
+Stepper x_axis_stepper = Stepper(200, 8, 11, 12, 13);
+
+int x_current_pos = 0;
+int y_current_pos = 0;
+
+int x_axis_stop = 4;
+int y_axis_stop = 3;
+
+int y_axis_motor = 6;
 
 void setup() {
-  //When Turned on, move y axis until it hits the stop
+  //When Turned on, move x axis until it hits the stop
+  while (digitalRead(x_axis_stop) == LOW)
+  {
+  	delay(10);
+  	x_axis_stepper.step(1);
+  }
 
   //When Turned on, move x axis until it hits the stop
+  while (digitalRead(y_axis_stop) == LOW)
+  {
+  	delay(10);
+  	analogWrite(y_axis_motor, 2);
+  }
 
   //Set current X and Y pos to 0
-  int x_current_pos = 0;
-  int y_current_pos = 0;
+  x_current_pos = 0;
+  y_current_pos = 0;
 
   Serial.begin(9600);
   Serial.write("Power On");
@@ -70,13 +88,11 @@ void y_move_to(int move_to, int y_current_pos) {
   move_x_axis_mm(move_amount, true,y_current_pos);
 }
 
-void loop(int x_current_pos, int y_current_pos) {
-  if (Serial.available() > 0)
-  {
-    str = Serial.read();
-    val = Serial.parseInt();
-  }
-  switch (str) {
+void serialEvent(){
+	str = Serial.read();
+	val = Serial.parseInt();
+	
+	switch (str) {
     case 'x':
       x_move_to(val, x_current_pos);
       break;
@@ -93,10 +109,20 @@ void loop(int x_current_pos, int y_current_pos) {
     case 'c':
       break;
 
-    case 's':
+    case 'z':
       x_move_to(val, x_current_pos);
       y_move_to(val, y_current_pos);
       break;
-  }
+}
 }
 
+void loop() {
+	if (digitalRead(x_axis_stop) == HIGH)
+  {
+x_current_pos = 0;
+  }
+  	if (digitalRead(y_axis_stop) == HIGH)
+  {
+y_current_pos = 0;
+  }
+}
