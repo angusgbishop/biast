@@ -47,31 +47,6 @@ class Screens(ScreenManager):
     def backScreen(self):
         self.current = 'Favourites_screen'
 
-    def add_drink(self, drink_name, drink_description, drink_recipe_children, drink_image):
-        no_whitespace = drink_name.replace(" ", "")
-        new_drink_id = no_whitespace.lower()
-        new_file_path = 'data/Drinks/library/%s.txt' % new_drink_id
-
-        drink_recipe = []
-
-        for input_box in drink_recipe_children:
-                drink_recipe.append([input_box.parts, input_box.ingredient_name])
-
-        with open(new_file_path, 'w') as new_file:
-
-            new_file.write('drink_id - %s\n' % new_drink_id)
-            new_file.write('drink_name - %s\n' % drink_name)
-            new_file.write('drink_description - %s\n' % drink_description)
-            new_file.write('drink_recipe - %s\n' % drink_recipe)
-            new_file.write('END OF DRINK DEFINITION')
-
-        if not new_file.closed:
-            new_file.close()
-
-        drinks.import_drink_library()
-
-        self.current = 'Settings_screen'
-
     def search(self, string_to_search):
         all_drinks = drinks.drink_ids
         print all_drinks
@@ -94,15 +69,6 @@ class Screens(ScreenManager):
                 button.text = drinks.get_drink_name(drink_id)
                 search_screen_results.add_widget(button)
         search_screen_results.add_widget(Factory.Label())
-
-    def add_drink_box(self):
-        self.ids.drink_manager_id.ids.drink_recipe_input.add_widget(Factory.DrinkBox())
-
-    def remove_drink_box(self):
-        boxlayout = self.ids.drink_manager_id.ids.drink_recipe_input
-        if len(boxlayout.children) > 1:
-            boxlayout.remove_widget(boxlayout.children[0])
-
 
 class EmptyScreen(Screen):
     title_text = StringProperty('')
@@ -129,7 +95,38 @@ class SelectionScreen(EmptyScreen):
 
 
 class SettingsScreen_DrinkManger(EmptyScreen):
-    pass
+    def add_drink_box(self):
+        self.ids.drink_recipe_input.add_widget(Factory.DrinkBox())
+
+    def remove_drink_box(self):
+        boxlayout = self.ids.drink_recipe_input
+        if len(boxlayout.children) > 1:
+            boxlayout.remove_widget(boxlayout.children[0])
+
+    def add_drink(self, drink_name, drink_description, drink_recipe_children, drink_image):
+        no_whitespace = drink_name.replace(" ", "")
+        new_drink_id = no_whitespace.lower()
+        new_file_path = 'data/Drinks/library/%s.txt' % new_drink_id
+
+        drink_recipe = []
+
+        for input_box in drink_recipe_children:
+                drink_recipe.append([input_box.parts, input_box.ingredient_name])
+
+        with open(new_file_path, 'w') as new_file:
+
+            new_file.write('drink_id - %s\n' % new_drink_id)
+            new_file.write('drink_name - %s\n' % drink_name)
+            new_file.write('drink_description - %s\n' % drink_description)
+            new_file.write('drink_recipe - %s\n' % drink_recipe)
+            new_file.write('END OF DRINK DEFINITION')
+
+        if not new_file.closed:
+            new_file.close()
+
+        drinks.import_drink_library()
+
+        self.current = 'Settings_screen'
 
 
 class SettingsScreen_BIASTSetup(EmptyScreen):

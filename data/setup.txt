@@ -1,2 +1,16 @@
+#DRINKS BELOW THIS LINE
+
 Gin,spirit, 100
 Dark Rum,spirit, 200
+Tequila, spirit, 300
+Vodka, spirit, 400
+Bourbon Whiskey, spirit, 500
+Brandy, spirit, 600
+Kina Lillet, spirit, 700
+Cherry Liqueur, spirit, 800
+Pineapple Juice,mixer, 900, 2
+Orange Juice,mixer, 920, 4
+Soda Water, mixer, 940, 7
+Tonic Water, mixer, 960, 12
+
+###########################

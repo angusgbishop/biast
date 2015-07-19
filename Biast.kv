@@ -45,6 +45,14 @@
             size: self.size
             source: root.background_image
 
+<ErrorPopup@Popup>
+    errorText: 'Oops, Something went wrong!'
+    size_hint: 0.5,0.5
+    title: 'Error'
+    auto_dismiss:True
+    Label:
+        text: root.errorText
+
 <TitleBar@BoxLayout>
     text: ''
     canvas.before:
@@ -92,19 +100,19 @@
                 # self here refers to the widget i.e BoxLayout
                 pos: self.pos
                 size: self.size
-        id:'total_box'
+        id:total_box
         orientation: 'vertical'
         TitleBar:
             text: root.text
         BoxLayout:
-            id:'mainArea'
+            id:mainArea
 
 <FavouritesScreen>:
     name: 'Favourites_screen'
     title_text: 'Favourites'
     Carousel:
         direction: 'right'
-        id: 'favs_carousel'
+        id: favs_carousel
         size_hint: (1,0.9)
         loop: 'True'
 
@@ -131,6 +139,8 @@
             on_text: app.root.search(self.text)
         ScrollView:
             BoxLayout:
+                size_hint_y: None
+                height:(len(self.children) * 50)
                 orientation: 'vertical'
                 id: search_results
 
@@ -320,11 +330,11 @@
                         padding: dp(40),0
                         Button:
                             text: 'Remove last ingredient'
-                            on_release: app.root.remove_drink_box()
+                            on_release: root.remove_drink_box()
                             size_hint_x: 0.4
                         Button:
                             text: 'Add new ingredient'
-                            on_release: app.root.add_drink_box()
+                            on_release: root.add_drink_box()
                             size_hint_x: 0.4
                 Separator:
                 Label:
@@ -347,7 +357,7 @@
                         on_release: app.root.current = 'Settings_screen'
                     Button:
                         text: 'Add Drink'
-                        on_release: app.root.add_drink(root.ids.drink_name_input.text , root.ids.drink_description_input.text , root.ids.drink_recipe_input.children , root.ids.drink_image_input.text)
+                        on_release: root.add_drink(root.ids.drink_name_input.text , root.ids.drink_description_input.text , root.ids.drink_recipe_input.children , root.ids.drink_image_input.text)
 
 
 <Screens>

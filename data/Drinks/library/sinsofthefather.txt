@@ -1,0 +1,5 @@
+drink_id - sinsofthefather
+drink_name - Sins Of The Father
+drink_description - Angus Doing Stupid Shit
+drink_recipe - [[1,'Stupidity']]
+END OF DRINK DEFINITION
