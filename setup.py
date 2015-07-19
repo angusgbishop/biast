@@ -18,7 +18,8 @@ def get_setup_drinks():
                     elif (val.lower() == 'spirit') or (val.lower() == 'mixer'):
                         dtype = val.lower()
                     else:
-                        pos = eval(val)
+                        if pos == 0:
+                            pos = eval(val)
                 setup_pos[name] = pos
                 setup_type[name] = dtype
 
