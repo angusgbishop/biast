@@ -3,3 +3,6 @@ drink_name - Monkey Gland
 drink_description - The Monkey Gland is a cocktail of gin, orange juice, grenadine and absinthe named after a surgical technique of grafting monkey testicle tissue into humans. The practice was started by Dr Serge Voronoff, and was intended to produce longevity. The Monkey Gland was created in the 1920s by Harry MacElhone, owner of Harry's New York Bar in Paris, France.
 drink_recipe - [[5, 'Gin'],[3, 'Orange Juice']]
 END OF DRINK DEFINITION
+Drink made: Mon, 18:43:23
+Drink made: Mon, 18:43:24
+Drink made: Mon, 18:43:25

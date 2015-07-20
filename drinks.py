@@ -1,6 +1,9 @@
 import math
 import glob
 import arduino_coms
+import statistics
+
+drink_filepath = {}
 
 drink_ids = []
 
@@ -15,36 +18,36 @@ drink_recipe = {}
 def import_drink_library():
 
     for filename in glob.glob('data/Drinks/library/*.txt'):
-        print filename
         with open(filename, 'r') as file:
             for line in file:
                 if line[:8] == 'drink_id':
-                    print line[11:-1]
                     drink_id = line[11:-1]
                     drink_ids.append(str(drink_id))
                 elif line[:17] == 'drink_description':
-                    print line[20:]
                     drink_desc = line[20:-1]
                     drink_description[drink_id] = drink_desc
                 elif line[:10] == 'drink_name':
-                    print line[13:]
                     drink_nme = line[13:-1]
                     drink_name[drink_id] = drink_nme
                 elif line[:12] == 'drink_recipe':
-                    print line[15:]
                     drink_rec = line[15:]
                     drink_recipe[drink_id] = eval(drink_rec)
                 elif line == 'END OF DRINK DEFINITION':
                     break
+        drink_filepath[drink_id] = filename
 
+def get_drink_ids():
+    return drink_ids
 
+def get_drink_filepath(drink_id):
+    return drink_filepath[drink_id]
 
 def get_drink_name(drink_id):
     return drink_name[drink_id]
 
 def get_drink_img(drink_id):
     image_pathname = 'data/Drinks/%s.*' % drink_id
-    print image_pathname
+    print 'drinks.py: ' + image_pathname
     image = glob.glob(image_pathname)
     if image == []:
         return 'data/Drinks/no_image.jpg'
@@ -92,3 +95,4 @@ def make_drink(drink_id):
         print ' the leftover volume is %s ml' % (cup_volume - volume_sum)
 
     arduino_coms.make_recipe(recipe_order)
+    statistics.drink_made(drink_id)

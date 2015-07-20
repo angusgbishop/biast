@@ -3,18 +3,9 @@ drink_name - Gin & Tonic
 drink_description - A gin and tonic is a highball cocktail made with gin and tonic water poured over ice. The cocktail was introduced by the army of the British East India Company in India. In India and other tropical regions, malaria was a persistent problem. In the 1700s it was discovered that quinine could be used to prevent and treat the disease, although the bitter taste was unpleasant. British officers in India in the early 19th century took to adding a mixture of water, sugar, lime and gin to the quinine in order to make the drink more palatable. Soldiers in India were already given a gin ration, and the sweet concoction made sense. Since it is no longer used as an antimalarial, tonic water today contains much less quinine, is usually sweetened, and is consequently much less bitter.
 drink_recipe - [[1, 'Gin'],[3, 'Tonic Water']]
 END OF DRINK DEFINITION
-Drink made: Sun, 19:17:14
-Drink made: Sun, 19:35:12
-Drink made: Sun, 21:10:50
-Drink made: Sun, 21:10:55
-Drink made: Sun, 21:21:54
-Drink made: Sun, 21:31:44
-Drink made: Sun, 21:47:46
-Drink made: Sun, 22:01:25
-Drink made: Sun, 22:04:12
-Drink made: Sun, 22:15:01
-Drink made: Sun, 22:17:07
-Drink made: Sun, 22:23:22
-Drink made: Sun, 22:28:39
-Drink made: Sun, 22:30:13
-Drink made: Sun, 22:32:23
+Drink made: Mon, 18:32:06
+Drink made: Mon, 18:32:14
+Drink made: Mon, 18:32:16
+Drink made: Mon, 18:32:17
+Drink made: Mon, 18:32:18
+Drink made: Mon, 18:32:18

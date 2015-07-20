@@ -5,6 +5,7 @@ from kivy.properties import StringProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import ScreenManager, Screen, RiseInTransition
 from kivy.factory import Factory
+from kivy.clock import Clock
 
 import statistics
 import drinks
@@ -42,27 +43,21 @@ class Screens(ScreenManager):
     def make_drink(self, drink_id):
 
         drinks.make_drink(drink_id)
-        statistics.drink_made(drink_id)
 
     def backScreen(self):
         self.current = 'Favourites_screen'
 
     def search(self, string_to_search):
         all_drinks = drinks.drink_ids
-        print all_drinks
         search_screen_results = self.ids.search_screen_id.ids.search_results
 
         drinks_found = ['No drinks found with that name! You can add a new one in the settings page.']
-
-        print 'searching for ', string_to_search
 
         search_screen_results.clear_widgets()
 
         for drink_id in all_drinks:
             drink_name_trunc = drinks.get_drink_name(drink_id)[:len(string_to_search)]
-            print 'checking against:', drink_name_trunc
             if drink_name_trunc.lower() == string_to_search.lower():
-                print drink_id
                 search_screen_results.add_widget(Factory.Separator())
                 button = Factory.DrinkFoundButton()
                 button.drink_id = drink_id
@@ -75,7 +70,6 @@ class EmptyScreen(Screen):
 
 
 class FavouritesScreen(EmptyScreen):
-    pass
 
 
 class DrinkScreen(EmptyScreen):
@@ -149,8 +143,12 @@ class DrinkCard(BoxLayout):
     pass
 
 class BiastApp(App):
+    def on_start(self):
+        statistics.get_favourites()
+
     def build(self):
         drinks.import_drink_library()
+
 
         return Screens()
 

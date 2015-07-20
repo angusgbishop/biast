@@ -3,3 +3,5 @@ drink_name - Buck's Fizz
 drink_description - The Buck's Fizz is an alcoholic drink made of two parts orange juice to one part Champagne. Some older recipes list grenadine as an additional ingredient, but the International Bartenders Association recipe does not include it. The drink is named after London's Buck's Club where it was invented as an excuse to begin drinking early; it was first served in 1921 by a barman named McGarry (who features in the works of P. G. Wodehouse as the barman of Buck's Club and the Drones Club).
 drink_recipe - [[2, 'Orange Juice'],[1, 'Champagne']]
 END OF DRINK DEFINITION
+Drink made: Mon, 18:32:38
+Drink made: Mon, 18:32:40

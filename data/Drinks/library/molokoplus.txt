@@ -3,3 +3,6 @@ drink_name - Moloko Plus
 drink_description - The Moloko Plus, also called Knifey Moloko is a highball cocktail drink from the book A Clockwork Orange. The book does not specify ingredients, so there are many variations, all of which use a large milk base and some have drugs, such as barbiturates added.
 drink_recipe - [[1, 'Absinthe'],[1, 'Anisette Liqueur'],[2, 'Irish Cream'],[5, 'Milk']]
 END OF DRINK DEFINITION
+Drink made: Mon, 18:32:44
+Drink made: Mon, 18:32:45
+Drink made: Mon, 18:32:46

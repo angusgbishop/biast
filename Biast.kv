@@ -12,20 +12,22 @@
     on_release: app.root.enterDrink(root.drink_id)
 
 <DrinkCard@BoxLayout>:
-    drink_name: ''
-    drink_description:''
+    drink_name: 'Placeholder Name'
+    drink_description:'Placeholder Description'
     drink_id:''
+    drink_image: ''
     orientation:'vertical'
     size_hint: (0.8,1)
     pos_hint: {'right':0.9}
     Button:
         on_release: app.root.enterDrink(root.drink_id)
-        background_normal: 'data/Drinks/' + root.drink_id + '.png'
+        background_normal: root.drink_image
     Label:
         id:'DrinkNameCard'
         size_hint:(1, 0.1)
         text: root.drink_name
         font_name: 'data/Roboto-Medium.ttf'
+    Separator:
     Label:
         id:'DrinkDescriptionCard'
         size_hint:(1, 0.1)
@@ -362,6 +364,7 @@
 
 <Screens>
     FavouritesScreen:
+        id: favourites_screen_id
     SearchScreen:
         id: search_screen_id
     SettingsScreen:
