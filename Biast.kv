@@ -6,6 +6,9 @@
 
 <LoadingImage@Image>:
 
+<ImageButton@ButtonBehavior+Image>:
+    source: 'data/Drinks/no_image.jpg'
+
 <DrinkFoundButton@Button>:
     size_hint_y: None
     height: dp(50)
@@ -15,13 +18,13 @@
     drink_name: 'Placeholder Name'
     drink_description:'Placeholder Description'
     drink_id:''
-    drink_image: ''
+    drink_image: 'data/Drinks/no_image.jpg'
     orientation:'vertical'
     size_hint: (0.8,1)
     pos_hint: {'right':0.9}
-    Button:
+    ImageButton:
+        source: root.drink_image
         on_release: app.root.enterDrink(root.drink_id)
-        background_normal: root.drink_image
     Label:
         id:'DrinkNameCard'
         size_hint:(1, 0.1)

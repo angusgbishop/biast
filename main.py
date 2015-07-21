@@ -71,6 +71,9 @@ class EmptyScreen(Screen):
 
 class FavouritesScreen(EmptyScreen):
 
+    def cycle_card(self):
+        Clock.schedule_interval(self.ids.favs_carousel.load_next(mode='next'),5)
+
 
 class DrinkScreen(EmptyScreen):
     pass

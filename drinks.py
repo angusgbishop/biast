@@ -96,3 +96,4 @@ def make_drink(drink_id):
 
     arduino_coms.make_recipe(recipe_order)
     statistics.drink_made(drink_id)
+    statistics.get_favourites()
