@@ -56,8 +56,8 @@ class Screens(ScreenManager):
         search_screen_results.clear_widgets()
 
         for drink_id in all_drinks:
-            drink_name_trunc = drinks.get_drink_name(drink_id)[:len(string_to_search)]
-            if drink_name_trunc.lower() == string_to_search.lower():
+            drink_name = drinks.get_drink_name(drink_id)
+            if string_to_search.lower() in drink_name.lower():
                 search_screen_results.add_widget(Factory.Separator())
                 button = Factory.DrinkFoundButton()
                 button.drink_id = drink_id
