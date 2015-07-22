@@ -1,5 +1,6 @@
 #include <Stepper.h>
 #include <AccelStepper.h>
+#include <Servo.h>
 
 // Bounce.pde
 // -*- mode: C++ -*-
@@ -11,6 +12,9 @@
 // Define a stepper and the pins it will use
 AccelStepper x_axis_stepper(AccelStepper::FULL4WIRE, 8, 11, 12, 13); // Defaults to AccelStepper::FULL4WIRE (4 pins) on 2, 3, 4, 5
 Stepper initStepper(200, 8,11,12,13);
+
+Servo y_axis;
+y_axis.attach(4);
 
 int val;
 int str;
@@ -46,14 +50,20 @@ void setup()
     initStepper.step(1);
   };
   Serial.println("Ready");
+  digitalWrite(9,LOW);
+  digitalWrite(10,LOW);
 }
 
 void x_move_to(int move_loc){
+	  digitalWrite(9,HIGH);
+  digitalWrite(10,HIGH);
   x_axis_stepper.runToNewPosition(move_loc / 0.123);
     Serial.print("Moved.");
+  digitalWrite(9,LOW);
+  digitalWrite(10,LOW);
 };
 
-void y_move_to(int move_to, int y_current_pos) {
+void y_move_to(int move_to) {
   int move_amount = 0;
   move_amount = move_to - y_current_pos;
 }
@@ -70,11 +80,11 @@ void serialEvent(){
     break;
 
   case 'y':
-    y_move_to(val, y_current_pos);
+    y_move_to(val);
     break;
 
   case 'a':
-    y_move_to(val, y_current_pos);
+    y_move_to(val);
     x_move_to(val);
     break;
 
@@ -99,4 +109,3 @@ void loop()
     y_current_pos = 0;
   }
 }
-
