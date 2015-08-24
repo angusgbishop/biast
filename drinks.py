@@ -2,6 +2,7 @@ import math
 import glob
 import arduino_coms
 import statistics
+from debuggingTools import debugPrint
 
 drink_filepath = {}
 
@@ -17,6 +18,7 @@ drink_recipe = {}
 
 def import_drink_library():
 
+    debugPrint("Starting to look for a file.")
     for filename in glob.glob('data/Drinks/library/*.txt'):
         with open(filename, 'r') as file:
             for line in file:
